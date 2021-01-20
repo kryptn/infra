@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     repoURL: https://kubernetes.github.io/ingress-nginx
-    targetRevision: 1.29.0
+    targetRevision: 3.20.1
     chart: nginx-ingress
   syncPolicy:
     automated: {}
