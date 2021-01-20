@@ -45,7 +45,7 @@ spec:
         paths:
           - backend:
               serviceName: nginx-service
-              servicePort: 8080
+              servicePort: 80
 ---
 apiVersion: v1
 kind: Namespace
