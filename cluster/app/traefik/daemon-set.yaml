@@ -50,7 +50,7 @@ spec:
         # - --log.level=debug
 
         # Let's Encrypt Configurtion.
-        - --certificatesresolvers.default.acme.email=kryptn@gmail.com
+        - --certificatesresolvers.default.acme.email=<YOUR_EMAIL>
         - --certificatesresolvers.default.acme.storage=acme.json
         - --certificatesresolvers.default.acme.tlschallenge
         # Use the staging ACME server. Uncomment this while testing to prevent
