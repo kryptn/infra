@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: https://kubernetes.github.io/ingress-nginx
     targetRevision: helm-chart-3.20.1
-    chart: nginx-ingress
+    chart: ingress-nginx/ingress-nginx
   syncPolicy:
     automated: {}
     syncOptions:
