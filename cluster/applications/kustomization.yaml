@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
 - ingress-nginx.yaml
 # - traefik/traefik.yaml
-- helloworld.yaml
+# - helloworld.yaml
