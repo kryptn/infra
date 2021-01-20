@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    repoURL: 'https://kubernetes-charts.storage.googleapis.com/'
+    repoURL: https://kubernetes.github.io/ingress-nginx
     targetRevision: 1.29.0
     chart: nginx-ingress
   syncPolicy:
