@@ -5,12 +5,14 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: default
+    namespace: ingress
     server: https://kubernetes.default.svc
   project: default
   source:
-    targetRevision: master
-    chart: charats/ingress-nginx
-    repoURL: https://github.com/kubernetes/ingress-nginx.git
+    repoURL: 'https://kubernetes-charts.storage.googleapis.com/'
+    targetRevision: 1.29.0
+    chart: nginx-ingress
   syncPolicy:
     automated: {}
+    syncOptions:
+    - CreateNamespace=true
