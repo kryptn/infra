@@ -6,15 +6,7 @@ metadata:
   labels:
     k8s-app: traefik-ingress-lb
 spec:
-  selector:
-    matchLabels:
-      k8s-app: traefik-ingress-lb
-      name: traefik-ingress-lb
   template:
-    metadata:
-      labels:
-        k8s-app: traefik-ingress-lb
-        name: traefik-ingress-lb
     spec:
       serviceAccountName: traefik-ingress-controller
       terminationGracePeriodSeconds: 60
