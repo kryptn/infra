@@ -3,5 +3,6 @@ kind: Kustomization
 
 resources:
 - ingress-nginx.yaml
+- cert-manager
 # - traefik/traefik.yaml
 # - helloworld.yaml
