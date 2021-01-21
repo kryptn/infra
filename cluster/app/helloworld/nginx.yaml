@@ -40,7 +40,7 @@ metadata:
     cert-manager.io/cluster-issuer: letsencrypt
 spec:
   rules:
-  - host: www.arq.dev
+  - host: arq.dev
     http:
       paths:
       - path: /
@@ -49,7 +49,7 @@ spec:
           servicePort: 80
   tls:
   - hosts:
-    - www.arq.dev
+    - arq.dev
     secretName: helloworld-cert
 ---
 apiVersion: v1
