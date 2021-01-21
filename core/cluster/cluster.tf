@@ -20,14 +20,14 @@ resource "digitalocean_record" "www" {
     domain = "arq.dev"
     type = "A"
     name = "www"
-    value = digitalocean_kubernetes_cluster.arq.ipv4_address
+    value = "134.209.143.84"
 }
 
 resource "digitalocean_record" "self" {
     domain = "arq.dev"
     type = "A"
     name = "@"
-    value = digitalocean_kubernetes_cluster.arq.ipv4_address
+    value = "134.209.143.84"
 }
 
 output "kubeconfig" {
