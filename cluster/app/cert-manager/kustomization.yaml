@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
 - cert-manager-v1.1.0.yaml
+- issuer.yaml
