@@ -5,4 +5,4 @@ resources:
 - ingress-nginx.yaml
 - cert-manager.yaml
 # - traefik/traefik.yaml
-# - helloworld.yaml
+- helloworld.yaml
