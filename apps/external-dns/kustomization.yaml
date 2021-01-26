@@ -4,7 +4,6 @@ kind: Kustomization
 namespace: external-dns
 
 bases:
-- https://github.com/kubernetes-sigs/external-dns/kustomize@master
 - secret
 
 resources:
