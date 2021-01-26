@@ -8,6 +8,7 @@ metadata:
     app.kubernetes.io/part-of: argocd
 data:
   url: https://argocd.arq.dev
+  users.anonymous.enabled: "true"
   repository.credentials: |
     - url: https://github.com/kryptn/
       passwordSecret:
