@@ -12,3 +12,5 @@ resources:
 # changes to config maps
 patchesStrategicMerge:
   - overlays/argo-cd-cm.yaml
+  - overlays/argo-cd-ingress.yaml
+  
