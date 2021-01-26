@@ -8,10 +8,10 @@ metadata:
     app.kubernetes.io/part-of: argocd
 data:
   repository.credentials: |
-    - url: https://github.com/kryptn
+    - url: https://github.com/kryptn/
       passwordSecret:
         name: argo-cd-github-token
         key: github_token
       usernameSecret:
         name: argo-cd-github-token
-        key: github_user
+        key: github_username
