@@ -16,7 +16,7 @@ spec:
     helm:
       parameters:
       - name: "nginx-ingress.controller.service.annotations.external-dns\\.alpha\\.kubernetes\\.io/hostname"
-        value: "arq.dev,*.arq.dev"
+        value: "arq.dev"
   syncPolicy:
     automated: {}
     syncOptions:
