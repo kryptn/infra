@@ -1,0 +1,17 @@
+version: "3"
+
+tasks:
+  create:
+    cmds:
+      - terraform apply -auto-approve
+      - terraform output -raw kubeconfig > ~/.kube/arq.yaml
+      - export KUBECONFIG=~/.kube/arq.yaml
+
+  destroy:
+    cmds:
+      - terraform destroy -auto-approve
+
+  refresh:
+    cmds:
+      - task: destroy
+      - task: create
