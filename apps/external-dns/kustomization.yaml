@@ -3,8 +3,5 @@ kind: Kustomization
 
 namespace: external-dns
 
-bases:
-- secret
-
 resources:
 - items.yaml

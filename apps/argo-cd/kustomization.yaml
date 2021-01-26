@@ -3,17 +3,10 @@ kind: Kustomization
 
 namespace: argocd
 
-bases:
-  - secret
-
 resources:
 
   - namespace.yaml
   - install.yaml
-
-# secretGenerator:
-#   - name: argo-cd-github-token
-#     env: github_token.env
 
 
 # changes to config maps
