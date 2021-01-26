@@ -4,23 +4,5 @@ includes:
   cluster:
     taskfile: ./do-cluster/Taskfile.yml
     dir: ./do-cluster
+  argocd: ./argo_cd.yml
 
-tasks:
-  deploy-argocd:
-    cmds:
-      - kubectl create ns argocd
-      - kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-      - $(kubectl get pods -n argocd -l app.kubernetes.io/name=argocd-server -o name | cut -d'/' -f 2)"
-
-  argocd-pw:
-    cmds:
-      - kubectl get pods -n argocd -l app.kubernetes.io/name=argocd-server -o name | cut -d'/' -f 2
-
-  bootstrap-cluster:
-    cmds:
-      - kubectl apply -k argocd-bootstrap
-
-  argo-cd-port-forward:
-    cmds:
-      - task: argocd-pw
-      - kubectl port-forward svc/argocd-server -n argocd 8080:443

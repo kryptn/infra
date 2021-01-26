@@ -3,3 +3,5 @@ kind: Kustomization
 namespace: argocd
 bases:
   - ../apps/argo-cd/
+  - github_secret/
+  - digitalocean_secret/

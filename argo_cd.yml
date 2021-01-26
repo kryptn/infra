@@ -1,0 +1,16 @@
+version: "3"
+
+
+tasks:
+  bootstrap:
+    cmds:
+      - kubectl apply -k argocd-bootstrap
+
+  admin-pw:
+    cmds:
+      - kubectl get pods -n argocd -l app.kubernetes.io/name=argocd-server -o name | cut -d'/' -f 2
+
+  port-forward:
+    cmds:
+      - task: argocd-pw
+      - kubectl port-forward svc/argocd-server -n argocd 8080:443
