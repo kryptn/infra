@@ -6,9 +6,6 @@ namespace: argocd
 generatorOptions:
  disableNameSuffixHash: true
 
-resources:
-- namespace.yaml
-
 secretGenerator:
   - name: argo-cd-github-token
     env: github_token.env

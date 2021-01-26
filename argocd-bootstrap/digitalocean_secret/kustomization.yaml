@@ -6,9 +6,6 @@ namespace: external-dns
 generatorOptions:
  disableNameSuffixHash: true
 
-resources:
-- namespace.yaml
-
 secretGenerator:
   - name: external-dns-digitalocean-token
     env: do_token.env
