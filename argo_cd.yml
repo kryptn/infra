@@ -10,7 +10,11 @@ tasks:
     cmds:
       - kubectl get pods -n argocd -l app.kubernetes.io/name=argocd-server -o name | cut -d'/' -f 2
 
+  deploy-core:
+    cmds:
+      - kubectl apply -f resources/bootstrap.yaml
+
   port-forward:
     cmds:
-      - task: argocd-pw
+      - task: admin-pw
       - kubectl port-forward svc/argocd-server -n argocd 8080:443
