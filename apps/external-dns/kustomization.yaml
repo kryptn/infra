@@ -4,7 +4,7 @@ kind: Kustomization
 secretGenerator:
 - name: digitalocean-token
   envs:
-  - do_token.env
+  - ../../secrets/do_token.env
 
 bases:
 - https://github.com/kubernetes-sigs/external-dns/kustomize@master
