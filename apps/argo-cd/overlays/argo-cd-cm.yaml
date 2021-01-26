@@ -17,7 +17,7 @@ data:
       usernameSecret:
         name: argo-cd-github-token
         key: github_username
-  resource.customizations: |
+    resource.customizations: |
     admissionregistration.k8s.io/MutatingWebhookConfiguration:
       # List of json pointers in the object to ignore differences
       ignoreDifferences: |
