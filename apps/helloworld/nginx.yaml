@@ -62,7 +62,7 @@ metadata:
     cert-manager.io/cluster-issuer: letsencrypt
 spec:
   rules:
-  - host: kryptn.com
+  - host: hihi.arq.dev
     http:
       paths:
       - path: /
@@ -71,7 +71,7 @@ spec:
           servicePort: 80
   tls:
   - hosts:
-    - kryptn.com
+    - hihi.arq.dev
     secretName: helloworld-cert-2
 ---
 apiVersion: v1
