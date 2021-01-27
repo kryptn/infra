@@ -6,3 +6,6 @@ includes:
     dir: ./do-cluster
   argocd: ./argo_cd.yml
 
+tasks:
+  create-secret:
+    

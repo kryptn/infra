@@ -1,0 +1,21 @@
+{
+  "kind": "SealedSecret",
+  "apiVersion": "bitnami.com/v1alpha1",
+  "metadata": {
+    "name": "cert-manager-digitalocean-token",
+    "namespace": "cert-manager",
+    "creationTimestamp": null
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "cert-manager-digitalocean-token",
+        "namespace": "cert-manager",
+        "creationTimestamp": null
+      }
+    },
+    "encryptedData": {
+      "do_token": "AgCKrjI5Wrbbcei1/NRxSRVfxSEZt9aDPjAv1Xqs5DP4KsDCEnuEi8/yVKjSDZoIvk3IHnC0IY0NIH3AdBPniHEpkGqsvjQYd/MaZrd3hwsL29lqCGQe/TYMMC1Cj1cL9xavUy69fequrRsNBp0/eLl6EcU2WYuXtpCNYg4PJneWIeLDc0vOjYEoi/zfD6FsEdfPx5LluzDZIesrh0Ks4MOhFri0Ke+VNTM79hZ5Oq4x2E61ia2mmTl4cSWrOdyYUBUJ6jd4zLi89mJQAS/ZO9aS8z1e5MZtVY1qJZU8hKxS0werynZbwt2uv0IKdfM9jhXDEzwMXv793z/Yj6FqqZz2ZLlWDnKeKjD1hZz/ZkAiOyptpj/i+UXJFDwzZM1GuPDOuaPyz8qwSoinoc0LQzqUsPu0xPPFCWp4CO+AfKEDzz03gMQq8U37zwPsHUmXoknjsqQZXbOoKYCfXeR5j2NzHrfEvmrr3IgHOWYNxAiKMefUQduTY6sHrTr8AHnc4OdplU3KtXwYuyPwarQ5O1dGzSXrGvPfKb484mU12mCvRZxGABu3rjPmhbgO/E0HBMinkP8N0TtwFMc+E+ZmlvyRuO1jEFopt0hXTuXzOH6YOY/AiD451N9XGgEVO713ut1s9+s7q3qvzrZjKTnocvf3CaRZcWyXsvpbqnf3sZ0xRLIp8yNpDEviMJ55GmkN5MNEe0XEuNvqDs2cPdyZGQm429SIHWEW/hRsMYCi2HKeFbkJREhnXqoL1oajeXJ+nUMA99/nRcItl/4XVLNmogtI"
+    }
+  }
+}

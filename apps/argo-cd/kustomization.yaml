@@ -8,6 +8,7 @@ resources:
   - namespace.yaml
   - install.yaml
   - argo-cd-ingress.yaml
+  - sealed-gh-token.json
 
 # changes to config maps
 patches:
