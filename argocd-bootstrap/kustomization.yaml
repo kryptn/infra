@@ -6,5 +6,6 @@ resources:
 
 bases:
   - ../apps/argo-cd/
-  - github_secret/
-  - digitalocean_secret/
+  - argo-cd-secrets/
+  - cert-manager-secrets/
+  - external-dns-secrets/

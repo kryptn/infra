@@ -10,6 +10,10 @@ spec:
     privateKeySecretRef:
       name: lets-encrypt-issuer-account-key
     solvers:
-    - http01:
+    - dns01:
+        digitalocean:
+          tokenSecretRef:
+            name: cert-manager-digitalocean-token
+            key: do_token
         ingress:
           class: nginx
