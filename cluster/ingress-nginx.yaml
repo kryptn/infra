@@ -15,7 +15,7 @@ spec:
     chart: ingress-nginx
     helm:
       values: |
-        service:
+        controller:
           annotations:
             external-dns.alpha.kubernetes.io/hostname: arq.dev,*.arq.dev,kryptn.com,*.kryptn.com
   syncPolicy:
