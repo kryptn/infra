@@ -8,4 +8,5 @@ resources:
 - external-dns.yaml
 - helloworld.yaml
 - httpbin.yaml
+- sealed-secrets.yaml
 # - wireguard.yaml
