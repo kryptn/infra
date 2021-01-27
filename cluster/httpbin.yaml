@@ -6,7 +6,7 @@ metadata:
 
 spec:
   destination:
-    namespace: default
+    namespace: httpbin
     server: https://kubernetes.default.svc
   project: default
   source:
