@@ -4,5 +4,10 @@ kind: Kustomization
 namespace: external-dns
 
 resources:
-- items.yaml
+- github.com/kubernetes-sigs/external-dns/kustomize?ref=v0.7.6
 - sealed-do-token.json
+
+patches:
+- path: overlays/digitalocean.yaml
+  target:
+    kind: Deployment
