@@ -8,4 +8,5 @@ generatorOptions:
 
 secretGenerator:
   - name: argo-cd-github-token
-    env: github_token.env
+    envs:
+      - github_token.env

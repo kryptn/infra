@@ -18,3 +18,9 @@ tasks:
     cmds:
       - task: admin-pw
       - kubectl port-forward svc/argocd-server -n argocd 8080:443
+
+  deploy:
+    cmds:
+      - task: bootstrap
+      - task: deploy-core
+      - task: admin-pw
