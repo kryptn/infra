@@ -7,4 +7,5 @@ resources:
 - cert-manager.yaml
 - external-dns.yaml
 - helloworld.yaml
+- httpbin.yaml
 # - wireguard.yaml

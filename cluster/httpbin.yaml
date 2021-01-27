@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: httpbin
+  namespace: argocd
+
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: apps/httpbin
+    repoURL: https://github.com/kryptn/infra.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated: {}
