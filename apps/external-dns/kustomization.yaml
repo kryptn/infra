@@ -4,6 +4,7 @@ kind: Kustomization
 namespace: external-dns
 
 resources:
+- namespace.yaml
 - github.com/kubernetes-sigs/external-dns/kustomize?ref=v0.7.6
 - sealed-do-token.json
 
