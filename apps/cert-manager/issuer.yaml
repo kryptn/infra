@@ -15,5 +15,3 @@ spec:
           tokenSecretRef:
             name: cert-manager-digitalocean-token
             key: do_token
-        ingress:
-          class: nginx
