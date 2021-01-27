@@ -1,0 +1,21 @@
+{
+  "kind": "SealedSecret",
+  "apiVersion": "bitnami.com/v1alpha1",
+  "metadata": {
+    "name": "external-dns-digitalocean-token",
+    "namespace": "external-dns",
+    "creationTimestamp": null
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "external-dns-digitalocean-token",
+        "namespace": "external-dns",
+        "creationTimestamp": null
+      }
+    },
+    "encryptedData": {
+      "do_token": "AgAGSRSdtM+UtLhpB5/d3/LY0Xz2+CmUPnTSyHxfpUCEA3nLZrXKJ7qH3oawiuEfHsiwhHDtXTBTS5OK4fWAyHUzpa4mp2v33wD0JYPculace4xeSEVvmbuCKnq4HwUH/NVVEj5qIA8qSr0GDcP21ntt2I2FjrGbkuf+gB2Qjd/nW231zkQSOICx51dwEAGd4tLMoTMcng2jpRR1s4/100mXjXHHnrRN55I1Embf2ZR63wQ8nKnin61sPXn4R6Bz/M4wOJKCi1IiFjBq8klYYAS39WcDsb0YOZAIqHav0gwh29tmT2qZXrn6v7UB66jeVcM3pQCcNhRZq4u0LmpLtuQe8k2qBQVhuO1j6ZttIEg1bvmEsWl/k9BnpIScGxbHPCJk8lL4QKyVLMQU3aFWOqb1MUTPfe8KVUG/8dRMQ+l9JeYk/8e2j50tPIQEdTaamVJ1KVJcP4p8xXE5GI8dd2cEkKHuzXNS3ZNfGof8Q1pHsfc7Yod01S3VDoWj23IKCPmrshmGrS/h4yGhlpDXm/j+TrypLtOpTbHIynFZFo5jbv4B8z+gXkU0HnMX04salKuoP9PM61m84H/unlNVIorgrfI9lFUcBsX4wMEuJXOnCzD+jhy/HTtuJvBCRK5K5dv42Ak+d9e3bDHd0SxTyzsg1/ETAHGZV0ZvrYGGOIwFqAZfPDGvtMWTpi4pkLD17xCJcfqCWZ2TlznaRVJVu2FwHdJ4+vGAGWRZoP0P9c7e8jFzjSKaVMrMMzl2cv/wVEBa8mgGKWzvKUxVtHnXmBf9"
+    }
+  }
+}

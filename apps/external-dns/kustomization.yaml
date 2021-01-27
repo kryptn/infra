@@ -5,3 +5,4 @@ namespace: external-dns
 
 resources:
 - items.yaml
+- sealed-do-token.json
