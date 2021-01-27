@@ -5,7 +5,9 @@ kind: Kustomization
 # - namespaces.yaml
 
 bases:
+  - ../apps/sealed-secrets/
   - ../apps/argo-cd/
+
   # - argo-cd-secrets/
   # - cert-manager-secrets/
   # - external-dns-secrets/
