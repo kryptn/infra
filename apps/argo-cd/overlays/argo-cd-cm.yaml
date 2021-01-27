@@ -89,3 +89,9 @@ data:
               end
               obj.spec.template.metadata.annotations["kubectl.kubernetes.io/restartedAt"] = os.date("!%Y-%m-%dT%XZ")
               return obj
+  resource.compareoptions: |
+    # disables status field diffing in specified resource types
+    # 'crd' - CustomResourceDefinition-s (default)
+    # 'all' - all resources
+    # 'none' - disabled
+    ignoreResourceStatusField: crd
