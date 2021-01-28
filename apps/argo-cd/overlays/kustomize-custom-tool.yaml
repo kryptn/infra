@@ -26,6 +26,6 @@ spec:
       containers:
       - name: argocd-repo-server
         volumeMounts:
-        - mountPath: /usr/local/bin/helm
+        - mountPath: /custom-tools/kustomize
           name: custom-tools
-          subPath: helm
+          subPath: kustomize
