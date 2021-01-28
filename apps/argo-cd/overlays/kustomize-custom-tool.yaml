@@ -25,4 +25,3 @@ spec:
         volumeMounts:
         - mountPath: /custom-tools/kustomize_3_9_2
           name: kustomize
-          subPath: kustomize
