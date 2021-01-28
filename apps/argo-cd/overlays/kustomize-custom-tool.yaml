@@ -10,7 +10,7 @@ spec:
     spec:
       # 1. Define an emptyDir volume which will hold the custom binaries
       volumes:
-      - name: kustomize
+      - name: custom-tools
         emptyDir: {}
       # 2. Use an init container to download/copy custom binaries into the emptyDir
       initContainers:
