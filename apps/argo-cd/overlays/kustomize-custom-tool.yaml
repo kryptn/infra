@@ -15,9 +15,9 @@ spec:
       # 2. Use an init container to download/copy custom binaries into the emptyDir
       initContainers:
       - name: download-tools
-        image: "kryptn/kustomize:latest"
+        image: "kryptn/kustomize:v3.9.2"
         volumeMounts:
-        - mountPath: /app/
+        - mountPath: /app
           name: kustomize
       # 3. Volume mount the custom binary to the bin directory (overriding the existing version)
       containers:
