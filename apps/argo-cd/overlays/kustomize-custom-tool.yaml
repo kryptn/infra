@@ -17,12 +17,12 @@ spec:
       - name: download-tools
         image: "kryptn/kustomize:latest"
         volumeMounts:
-        - mountPath: /custom-tools
+        - mountPath: /app
           name: custom-tools
       # 3. Volume mount the custom binary to the bin directory (overriding the existing version)
       containers:
       - name: argocd-repo-server
         volumeMounts:
-        - mountPath: /usr/local/bin/kustomize
+        - mountPath: /custom-tools/kustomize_3_9_2
           name: custom-tools
           subPath: kustomize
