@@ -9,3 +9,9 @@ namespace: sealed-secrets
 
 commonLabels:
   app: sealed-secrets
+
+patchesJson6902:
+- target:
+    kind: CustomResourceDefinition
+    name: sealedsecrets.bitnami.com
+  path: delete-properties.yaml
