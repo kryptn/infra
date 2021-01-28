@@ -10,19 +10,19 @@ spec:
     spec:
       # 1. Define an emptyDir volume which will hold the custom binaries
       volumes:
-      - name: custom-tools
+      - name: kustomize
         emptyDir: {}
       # 2. Use an init container to download/copy custom binaries into the emptyDir
       initContainers:
       - name: download-tools
         image: "kryptn/kustomize:latest"
         volumeMounts:
-        - mountPath: /app
-          name: custom-tools
+        - mountPath: /app/
+          name: kustomize
       # 3. Volume mount the custom binary to the bin directory (overriding the existing version)
       containers:
       - name: argocd-repo-server
         volumeMounts:
         - mountPath: /custom-tools/kustomize_3_9_2
-          name: custom-tools
+          name: kustomize
           subPath: kustomize
