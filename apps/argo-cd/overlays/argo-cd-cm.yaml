@@ -95,4 +95,3 @@ data:
     # 'all' - all resources
     # 'none' - disabled
     ignoreResourceStatusField: crd
-  kustomize.version.v3.9.2: /custom-tools/kustomize_3_9_2
