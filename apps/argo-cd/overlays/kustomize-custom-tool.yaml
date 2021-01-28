@@ -15,13 +15,17 @@ spec:
       # 2. Use an init container to download/copy custom binaries into the emptyDir
       initContainers:
       - name: download-tools
-        image: "kryptn/kustomize:v3.9.2"
+        image: alpine:3.8
+        command: [sh, -c]
+        args:
+        - curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh" | bash && mkdir /custom-tools && cp kustomize custom-tools/kustomize
         volumeMounts:
-        - mountPath: /app
-          name: kustomize
+        - mountPath: /custom-tools
+          name: custom-tools
       # 3. Volume mount the custom binary to the bin directory (overriding the existing version)
       containers:
       - name: argocd-repo-server
         volumeMounts:
-        - mountPath: /custom-tools/kustomize_3_9_2
-          name: kustomize
+        - mountPath: /usr/local/bin/helm
+          name: custom-tools
+          subPath: helm
