@@ -95,3 +95,15 @@ data:
     # 'all' - all resources
     # 'none' - disabled
     ignoreResourceStatusField: crd
+
+  dex.config: |
+    connectors:
+      # GitHub example
+      - type: github
+        id: github
+        name: GitHub
+        config:
+          clientID: 3f6eb298c1a35668a738
+          clientSecret: $dex.github.clientSecret
+          orgs:
+          - name: Quantric
