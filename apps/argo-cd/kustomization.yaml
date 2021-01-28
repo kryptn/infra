@@ -14,7 +14,7 @@ patches:
 - path: overlays/argo-cd-cm.yaml
   target:
     kind: ConfigMap
-- path: overlays/argocd-rbac-cm.yaml
+- path: overlays/argocd-rbac.yaml
   target:
     kind: ConfigMap
 
