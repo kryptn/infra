@@ -4,4 +4,8 @@ kind: Kustomization
 namespace: thelounge
 
 resources:
-- base
+- ns.yaml
+- pvc.yaml
+- service.yaml
+- deployment.yaml
+- ingress.yaml
