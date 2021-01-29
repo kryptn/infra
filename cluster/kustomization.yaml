@@ -9,4 +9,5 @@ resources:
 - helloworld.yaml
 - httpbin.yaml
 - sealed-secrets.yaml
+- thelounge.yaml
 # - wireguard.yaml
