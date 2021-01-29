@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: thelounge
+spec:
+  selector:
+    matchLabels:
+      app: thelounge
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: thelounge
+    spec:
+      volumes:
+      - name: thelounge-storage
+        persistentVolumeClaim:
+          claimName: thelounge-pvc
+      containers:
+      - name: thelounge
+        image: thelounge/thelounge:4.2.0-alpine
+        ports:
+        - containerPort: 9000
+        volumeMounts:
+          - mountPath: /var/opt/thelounge
+            name: thelounge-storage

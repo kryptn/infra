@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: thelounge
+  annotations:
+    # use the shared ingress-nginx
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: letsencrypt
+spec:
+  rules:
+  - host: thelounge.arq.dev
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: thelounge
+          servicePort: 80
+  tls:
+  - hosts:
+    - thelounge.arq.dev
+    secretName: thelounge-cert
