@@ -7,7 +7,7 @@ spec:
   destination:
     namespace: default
     server: https://kubernetes.default.svc
-  project: default
+  project: cluster-infra
   source:
     path: apps/argo-cd
     repoURL: https://github.com/kryptn/infra.git
