@@ -15,4 +15,4 @@ data:
     p, role:org-admin, repositories, update, *, allow
     p, role:org-admin, repositories, delete, *, allow
 
-    g, quantric:*, role:admin
+    g, quantric:*, role:org-admin
