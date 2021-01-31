@@ -8,7 +8,7 @@ spec:
   destination:
     namespace: ingress-nginx
     server: https://kubernetes.default.svc
-  project: cluster-infra
+  project: default
   source:
     repoURL: https://kubernetes.github.io/ingress-nginx
     targetRevision: v3.21.0
