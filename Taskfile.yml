@@ -5,4 +5,4 @@ includes:
     taskfile: ./do-cluster/Taskfile.yml
     dir: ./do-cluster
   argocd: ./tasks/argo_cd.yml
-  secret: ./tasks/sealed_secrets.yml
+  # secret: ./tasks/sealed_secrets.yml
