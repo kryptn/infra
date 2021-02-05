@@ -5,8 +5,9 @@ resources:
 - deployment.yaml
 - ingress.yaml
 - svc.yaml
+- sealed-websub-config.json
 
-namespace: httpbin
+namespace: websub-listener
 
 commonLabels:
-  app: httpbin
+  app: websub-listener
