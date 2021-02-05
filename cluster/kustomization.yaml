@@ -12,4 +12,5 @@ resources:
 - httpbin.yaml
 - sealed-secrets.yaml
 - thelounge.yaml
+- websub-listener.yaml
 # - wireguard.yaml

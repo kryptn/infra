@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: websub-listener-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: letsencrypt
+spec:
+  rules:
+  - host: websub.arq.dev
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: websub-listener-service
+          servicePort: 80
+  tls:
+  - hosts:
+    - websub.arq.dev
+    secretName: websub-listener-cert
