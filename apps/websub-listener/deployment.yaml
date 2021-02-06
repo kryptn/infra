@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: websub-listener
-        image: kryptn/websub-listener:v0.0.5
+        image: kryptn/websub-listener:v0.0.6
         ports:
         - containerPort: 8080
         volumeMounts:
