@@ -12,3 +12,7 @@ resources:
 
 commonLabels:
   app: websub-listener
+
+images:
+- name: kryptn/websub-listener
+  newTag: v0.1.2
