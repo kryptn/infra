@@ -15,4 +15,4 @@ commonLabels:
 
 images:
 - name: kryptn/websub-listener
-  newTag: v0.1.2
+  newTag: v0.1.3
