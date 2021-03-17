@@ -13,3 +13,4 @@ resources:
 # - thelounge.yaml
 - websub-listener.yaml
 # - wireguard.yaml
+- nats-operator.yaml
