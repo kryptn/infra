@@ -5,3 +5,6 @@ namespace: argo-workflows
 
 resources:
 - github.com/argoproj/argo-workflows/manifests/cluster-install?ref=v2.12.10
+
+patches:
+- ./crd-patch.yaml
