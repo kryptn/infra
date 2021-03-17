@@ -12,7 +12,7 @@ tasks:
 
   deploy-core:
     cmds:
-      - kubectl apply -f resources/bootstrap.yaml
+      - kubectl apply -f cluster/cluster.yaml
 
   port-forward:
     cmds:
