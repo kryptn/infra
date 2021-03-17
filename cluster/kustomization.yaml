@@ -8,9 +8,9 @@ resources:
 - ingress-nginx.yaml
 - cert-manager.yaml
 - external-dns.yaml
-- helloworld.yaml
+# - helloworld.yaml
 - httpbin.yaml
 - sealed-secrets.yaml
-- thelounge.yaml
+# - thelounge.yaml
 - websub-listener.yaml
 # - wireguard.yaml
