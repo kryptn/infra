@@ -17,10 +17,6 @@ spec:
       values: |
         clusterScoped: true
         replicaCount: 3
-        image:
-          tag: 0.7.4
-        cluster:
-          version: 1.4.1
         auth:
           enabled: false
   syncPolicy:
