@@ -4,8 +4,8 @@ kind: Kustomization
 namespace: argocd
 
 resources:
+  - github.com/argoproj/argo-cd/manifests/cluster-install?ref=v2.0.0-rc2
   - namespace.yaml
-  - install.yaml
   - argo-cd-ingress.yaml
   - sealed-gh-token.json
 
