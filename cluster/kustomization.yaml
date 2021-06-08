@@ -9,6 +9,7 @@ resources:
 - cert-manager.yaml
 - external-dns.yaml
 # - helloworld.yaml
+- kryptn-com.yaml
 - httpbin.yaml
 - sealed-secrets.yaml
 # - thelounge.yaml
