@@ -112,9 +112,6 @@ data:
         config:
           clientID: 3f6eb298c1a35668a738
           clientSecret: $dex.github.clientSecret
-          redirectURI: https://argocd.arq.dev/api/dex/callback
           loadAllGroups: true
-          scopes:
-            - profile
-            - email
-            - groups
+          requestedScopes: ["openid", "profile", "email", "groups"]
+          requestedIDTokenClaims: {"groups": {"essential": true}}
