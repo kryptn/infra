@@ -12,10 +12,11 @@
         "name": "external-dns-digitalocean-token",
         "namespace": "external-dns",
         "creationTimestamp": null
-      }
+      },
+      "data": null
     },
     "encryptedData": {
-      "do_token": "AgALL/UStmGY1Vgs65KinlidzOuSE2LE5vKapI+EKzhq3FoS5hlE+dwqkupzohw1oTa4rh9x4B5v5ai+nXqZsyU9JgLIIIRWmVG2/ELHCCEPBj2FrblESI2Oky01G1A4S0XJgaTplTw3shq/9fxnBkNljYfwKvRKZ2R+Q1ZN9foZpVd3XHIBJCO5zRTOE47EYiVUMbyFOJeCbGxa/N/gVrcwZJOGyz6K761tz+9oa1MKwUqRZ0KiFqVoc6Ozllq1N+IJNCijaZZM6KlccLuhiqWYQwNtxFSlfMHoe16wTDFVdwvCkfLPsKuyhhuwK3+yBwoiVDIK6dIhTXYQQpD6OPO/mQ6M18VzniuaI1v5CxymVtAI3AmMkDTBu61oOaOp6cfFUccFQSuOlbEwFDZa8uKsjsZLiiasCQqfrYInONPPY35sg6cOg1pi127fhQp4qLt0e/XzjHHCH3QByQAkQayoj9ivBlXmuunYg7jqRCkRLitmyg1vB1oY51+7HgADW5YVZe3ZvnfiEYh1KGtc3FBk716X9oCKDQalQDAFrkMsZchifn2eVzUH4sJByARzhqf8NmJowlBfzCcgAH/2+HvOvOX2xaOWFIoJ80/Y74t9YJiQEahKmp6gnvOYP72ourN3IcgP2kvjROr3U1uDfgQsb+02RkFhczoL2QWLCUfbm6FX3OKAX+nZxj6aSnblG698Nv1je1QbAqspVAnhsz4nrVpIZbMquxok6g6N5sGn9VnPBf7ClQvhpdYy718XDb2HeYktDmBSFd3r2WS7pqxd"
+      "do_token": "AgBNJrUWtAJkctmewIGrdlzzbmRa/1cPGsD0gpEMP/R/q8a3CHPm3mCP/BcHaMspsJZQZ1IZiRJO/ONFhwocFnoeoVOM6Xc5TwRNO3ARCS0ZCBHOalHekN9zw3BXfv3I4fpeJ5sGFGkvCrRVbwkGiXIgAlYL8DLyAu3q4o6LQbfDZ24MmWndbni5ow8xXQlrHbbkistIOaWQgNSvfBYPwWZ27Xb8u6YlscxOqidagAX8X0DAL1SxLGEMIUUY90xbsPyFhMdXeBrFtbUGq0/mLrEFiPfKQ+X56nSylLnIisFItHdpvbwzSzL0/6mvfz+4XRrPfyYGjSnMVEZedldrUwmkBF8qw4EBFRzi/Nsr86BPQJKXQdA+v4ur2rX19cHTmzV+ue5+HIHrR/YLj+UOansoJPlTvqC7m6l4s1bmwLLOOtMeJyw4NB+6yED4PbH+VSpddpsuJtDl6oeJ4b7P5GzHmWgokuo/DjlGG3EtBh4jxdUx9DZEiOW44TqnlQ+0WzAXDz2WGnTc2DJsHWvOboeHI07RKSTnzt8Bye1c/tTvJDUxCcUUaNneh70ICAVOXgv8Ypwa6XHQfgiFgkqXhPRLMVDWgfAatS4lTyWQD4Wf+kTB/maIS8Ju1nKbM6f4uuhPZutS/aluZO8pWoIKCxoZgShWdfJEGlXnr80jLgMtpRdYP/VvATunCJ9xsNoyA2KxR5tSBP/LS2LDeTgmWIl+JuGLTkMKriZcMuix+z8kWcRAEYrplaWhf0+x6IJTuJ4awQLk0vziFnyUsT5GMm3X"
     }
   }
 }

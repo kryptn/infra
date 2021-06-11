@@ -12,10 +12,11 @@
         "name": "cert-manager-digitalocean-token",
         "namespace": "cert-manager",
         "creationTimestamp": null
-      }
+      },
+      "data": null
     },
     "encryptedData": {
-      "do_token": "AgBcnWIb3A6uwH3nYXz5mSkGxDM38ZvWJEIvC8MBdGlR1r9TIfMNUP9GOmdAdpksRhlWsoFJyucgzBX/dZGBhoGnBOoEnW+ejh2rJ+3I/phtnhEg+5SBS6v138ZdWfRFOF5n7XQDvKTjR6qYIRdXAhXEzXYiZEbASjwfHAOz2FF3sAksasFJ779ZDbEIG1cuItIhKiWJwpGErwZlHDmJuyErS9Ph/pKnwIE64Q2xj9tOTPIeuRgDN9QKaDDkVMmLC/d1EkU9WnAPTcVSXSj/Fl176Kin7Z2QIdG3gqAU0A3r6De+ETgSn7vEeM2ZDLaaxgxHWDgatXbU2veWRdE3YH1ZYDxmKqzEDeBqgbUyHHUSwiQrWMmdJiZsdcR2MRqKjw6gyGi23VRNnfDzWSdBpTP6wEG1/wK/DZjGJAgZQQ4t1pZugy47sgC5y8Hv9hLXaDBii0y9Di4VmeHVr/nTrX+PoP53is7nIin6v5RGnr+vUoovzJjJA/X2M+b8atUhxAA5sNMRDkSZSjfdV6uQYhSmlp7bmpRVbGQaofcmvK7MZ1RwZAbntQM1++KChBxdIPnJppMJqnle8wS+KhkwK0TqUjnHvErC0UuGfZ+1rNnsPEUt6eRmRX6VpRf/GHM8uAr6tFF1+nR7teKdZ69CTKSl+maueNoYobzvxOWaWqogj3msqHJnu3zd262bf3U3OYc38dMv2KKWq51usZAFg4N76rI9IRP2z5g/ZArtvFZVFV7RnxRgyyumZJk8Uc0/VBoCtLOgEOHIfuAN/brsxoHt"
+      "do_token": "AgAEjxChbXrpjAPw1XXCC2wTBCp8pHXeA+6XeOcKB95lUOxD4FnIZWEb/CiFdVyV7FWftVGRQ3kVb1gG5+VcazJd8R2Ftkz0v0yR2/TY6mm8qe0oEE+U/vS4aAEq+Zum5p8v0NKabtWugVA0mthzrMz8Saypa8cZ7JPskl2pogMgVmtY5XuyOWiJC2z4mpWdA/mWURtHs+M/WeCqYILKftkH6+WEYpojyC7onxAPlqy9JKaLkJmXb84k5qPDTawrKWBlM4PeEGq8iTblAZ8ukaNf6JTBTB2indW8Kg8b5dk0bPlGOx7IA5LZsd/Xbe+XUVqJu7fUEeRDM9Y0yVCBKzmnKEn8iX+eyLyRfVp4rGS4vkB+pwFd8bQtWDikNNNAG6CUhT8cdn0hgmvcxkxmxZR4jwM2jfszQrrJCX3HhuOlteDCdLjsl/8a4hEYTO56Yx9D/+Sxb/lRSaCgXbl8VSXYQD3BYzMVm8hPaEm40RzjblEu/otHr/+lk1fxazHZB8dpMa+I/uK9KSfQXb09hYmMFBkQFy0N8tLuX8CQ40gPs9zKB6Jh4kRF4mYFc/G6nBlrz1V8LvDzCBxuC39SB7mh2NJ7F9vW9TE2vsUN+jO/jXnRYPBTIHyLe9eZN8fJP0+hEFlthOAKnv6Vyr3l1iU9QIrUtffCyQb+C85EscHHvQWXHqW7ua7UvQnAdK7ObSK8WDIoBmQ1wlmSym64bVx/C6m1eYDATiouGtiK0OTou7stGWWXpRX65a7E+Qv4dP+LL7EoZmOR4TkAOAJZLEdn"
     }
   }
 }
