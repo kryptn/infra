@@ -4,7 +4,8 @@ kind: Kustomization
 namespace: argo-workflows
 
 resources:
-- github.com/argoproj/argo-workflows/manifests/cluster-install?ref=v2.12.10
+# https://github.com/argoproj/argo-workflows/releases/latest
+- github.com/argoproj/argo-workflows/manifests/cluster-install?ref=v3.0.7
 
 patches:
 - ./crd-patch.yaml
