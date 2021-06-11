@@ -114,5 +114,7 @@ data:
           clientSecret: $dex.github.clientSecret
           redirectURI: https://argocd.arq.dev/api/dex/callback
           loadAllGroups: true
-          #orgs:
-          #- name: Quantric
+          scopes:
+            - profile
+            - email
+            - groups
