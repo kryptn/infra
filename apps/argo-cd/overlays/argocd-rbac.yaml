@@ -39,4 +39,4 @@ data:
     g, role:admin, role:readonly
     g, admin, role:admin
 
-    g, quantric:*, role:admin
+    g, quantric, role:admin
