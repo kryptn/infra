@@ -106,5 +106,6 @@ data:
         config:
           clientID: 3f6eb298c1a35668a738
           clientSecret: $dex.github.clientSecret
-          orgs:
-          - name: Quantric
+          loadAllGroups: true
+          #orgs:
+          #- name: Quantric
