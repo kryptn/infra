@@ -9,6 +9,7 @@ metadata:
 data:
   url: https://argocd.arq.dev
   users.anonymous.enabled: "false"
+  admin.enabled: "false"
   repository.credentials: |
     - url: https://github.com/kryptn/
       passwordSecret:
@@ -113,5 +114,3 @@ data:
           clientID: 3f6eb298c1a35668a738
           clientSecret: $dex.github.clientSecret
           loadAllGroups: true
-          requestedScopes: ["openid", "profile", "email", "groups"]
-          requestedIDTokenClaims: {"groups": {"essential": true}}
