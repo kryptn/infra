@@ -90,6 +90,12 @@ data:
               end
               obj.spec.template.metadata.annotations["kubectl.kubernetes.io/restartedAt"] = os.date("!%Y-%m-%dT%XZ")
               return obj
+    bitnami.com/SealedSecret:
+      health.lua: |
+        hs = {}
+        hs.status = "Healthy"
+        hs.message = "Controller doesn't report resource status"
+        return hs
   resource.compareoptions: |
     # disables status field diffing in specified resource types
     # 'crd' - CustomResourceDefinition-s (default)
@@ -106,6 +112,7 @@ data:
         config:
           clientID: 3f6eb298c1a35668a738
           clientSecret: $dex.github.clientSecret
+          redirectURI: https://argocd.arq.dev/api/dex/callback
           loadAllGroups: true
           #orgs:
           #- name: Quantric
