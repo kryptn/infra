@@ -7,7 +7,7 @@ spec:
   destination:
     namespace: external-dns
     server: https://kubernetes.default.svc
-  project: default
+  project: infrastructure
   source:
     path: apps/external-dns
     repoURL: https://github.com/kryptn/infra.git
