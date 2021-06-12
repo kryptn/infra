@@ -9,6 +9,5 @@ resources:
 - public.yaml
 - github.com/kryptn/infra/applications/public?ref=HEAD
 - private.yaml
-- github.com/kryptn/infra-private/projects?ref=HEAD
 - projects.yaml
 
