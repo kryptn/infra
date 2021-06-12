@@ -4,8 +4,19 @@ metadata:
   name: argocd-rbac-cm
   namespace: argocd
 data:
-  policy.default: role:readonly
+  policy.default: role:readonly-public
   policy.csv: |
+    p, role:readonly-public, applications, get, */*, allow
+    p, role:readonly-public, certificates, get, *, allow
+    p, role:readonly-public, clusters, get, *, allow
+    p, role:readonly-public, repositories, get, *, allow
+    p, role:readonly-public, projects, get, *, allow
+    p, role:readonly-public, accounts, get, *, allow
+    p, role:readonly-public, gpgkeys, get, *, allow
+
+    p, role:readonly-public, applications, get, private/*, deny
+    p, role:readonly-public, projects, get, private, deny
+
     p, role:readonly, applications, get, */*, allow
     p, role:readonly, certificates, get, *, allow
     p, role:readonly, clusters, get, *, allow
