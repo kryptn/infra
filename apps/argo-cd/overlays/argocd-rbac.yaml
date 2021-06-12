@@ -6,6 +6,17 @@ metadata:
 data:
   policy.default: role:readonly-public
   policy.csv: |
+    p, role:readonly-public, applications, get, */*, allow
+    p, role:readonly-public, certificates, get, *, allow
+    p, role:readonly-public, clusters, get, *, allow
+    p, role:readonly-public, repositories, get, *, allow
+    p, role:readonly-public, projects, get, *, allow
+    p, role:readonly-public, accounts, get, *, allow
+    p, role:readonly-public, gpgkeys, get, *, allow
+
+    p, role:readonly-public, applications, get, private/*, deny
+    p, role:readonly-public, projects, get, private, deny
+
     p, role:readonly, applications, get, */*, allow
     p, role:readonly, certificates, get, *, allow
     p, role:readonly, clusters, get, *, allow
@@ -13,9 +24,6 @@ data:
     p, role:readonly, projects, get, *, allow
     p, role:readonly, accounts, get, *, allow
     p, role:readonly, gpgkeys, get, *, allow
-
-    p, role:readonly-public, applications, get, private/*, deny
-    p, role:readonly-public, projects, get, private, deny
 
     p, role:admin, applications, create, */*, allow
     p, role:admin, applications, update, */*, allow
@@ -39,7 +47,6 @@ data:
     p, role:admin, gpgkeys, create, *, allow
     p, role:admin, gpgkeys, delete, *, allow
 
-    g, role:readonly-public, role:readonly
     g, role:admin, role:readonly
     g, admin, role:admin
 
