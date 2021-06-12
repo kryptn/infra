@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: grafana-agent
+  namespace: argocd
+spec:
+  destination:
+    namespace: grafana-agent
+    server: https://kubernetes.default.svc
+  project: infrastructure
+  source:
+    path: apps/grafana-agent
+    repoURL: https://github.com/kryptn/infra.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated: {}
+    syncOptions:
+    - CreateNamespace=true
