@@ -10,10 +10,11 @@ spec:
   # Project description
   description: Private
 
-  destinations:
-  - server: https://kubernetes.default.svc
-
-  # Allow manifests to deploy from any Git repos
   sourceRepos:
   - '*'
-
+  destinations:
+  - namespace: '*'
+    server: '*'
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
