@@ -3,12 +3,11 @@ kind: Application
 metadata:
   name: ingress-nginx
   namespace: argocd
-
 spec:
   destination:
     namespace: ingress-nginx
     server: https://kubernetes.default.svc
-  project: default
+  project: infrastructure
   source:
     repoURL: https://kubernetes.github.io/ingress-nginx
     targetRevision: v3.24.0

@@ -1,16 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: websub-listener
+  name: external-dns
   namespace: argocd
-
 spec:
   destination:
-    namespace: websub-listener
+    namespace: external-dns
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: apps/websub-listener
+    path: apps/external-dns
     repoURL: https://github.com/kryptn/infra.git
     targetRevision: HEAD
   syncPolicy:

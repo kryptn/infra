@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argo-workflows
+  name: httpbin
   namespace: argocd
 spec:
   destination:
-    namespace: argo-workflows
+    namespace: httpbin
     server: https://kubernetes.default.svc
-  project: default
+  project: public
   source:
-    path: apps/argo-workflows
+    path: apps/httpbin
     repoURL: https://github.com/kryptn/infra.git
     targetRevision: HEAD
   syncPolicy:

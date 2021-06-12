@@ -4,9 +4,11 @@ kind: Kustomization
 namespace: argocd
 
 resources:
-  - public.yaml
-  - github.com/kryptn/infra/cluster?ref=HEAD
-  - private.yaml
-  - github.com/kryptn/infra-private/projects?ref=HEAD
-  - projects.yaml
+- infrastructure.yaml
+- github.com/kryptn/infra/applications/infrastructure?ref=HEAD
+- public.yaml
+- github.com/kryptn/infra/applications/public?ref=HEAD
+- private.yaml
+- github.com/kryptn/infra-private/projects?ref=HEAD
+- projects.yaml
 

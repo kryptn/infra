@@ -1,16 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hello-world
+  name: kryptn-com
   namespace: argocd
-
 spec:
   destination:
     namespace: default
     server: https://kubernetes.default.svc
-  project: default
+  project: public
   source:
-    path: apps/helloworld
+    path: apps/kryptn-com
     repoURL: https://github.com/kryptn/infra.git
     targetRevision: HEAD
   syncPolicy:
