@@ -7,5 +7,6 @@ resources:
   - public.yaml
   - github.com/kryptn/infra/cluster?ref=HEAD
   - private.yaml
+  - github.com/kryptn/infra-private/projects?ref=HEAD
   - projects.yaml
 
