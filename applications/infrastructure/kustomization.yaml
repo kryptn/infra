@@ -6,7 +6,6 @@ resources:
 - argo-workflows.yaml
 - cert-manager.yaml
 - external-dns.yaml
-- grafana-agent.yaml
 - ingress-nginx.yaml
 - nats-operator.yaml
 - sealed-secrets.yaml
