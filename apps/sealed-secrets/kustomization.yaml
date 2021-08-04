@@ -5,7 +5,7 @@ kind: Kustomization
 resources:
 - namespace.yaml
 - controller.yaml
-# wget https://github.com/jetstack/cert-manager/releases/download/v1.3.1/cert-manager.yaml -O cert-manager.yaml
+# wget https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.16.0/controller.yaml -O controller.yaml
 
 
 
