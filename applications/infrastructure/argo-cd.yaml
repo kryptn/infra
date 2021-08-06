@@ -13,6 +13,6 @@ spec:
     repoURL: https://github.com/kryptn/infra.git
     targetRevision: HEAD
   syncPolicy:
-    automated: {}
+    # automated: {}
     syncOptions:
     - CreateNamespace=true
