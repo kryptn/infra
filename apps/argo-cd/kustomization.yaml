@@ -4,21 +4,20 @@ kind: Kustomization
 namespace: argocd
 
 resources:
-# https://github.com/argoproj/argo-cd/releases/latest
-- github.com/argoproj/argo-cd/manifests/cluster-install?ref=v2.0.5
-- namespace.yaml
-- argo-cd-ingress.yaml
-- sealed-gh-token.json
-- sealed-gh-odic-secret.json
+  # https://github.com/argoproj/argo-cd/releases/latest
+  - github.com/argoproj/argo-cd/manifests/cluster-install?ref=v2.1.0-rc2
+  - namespace.yaml
+  - argo-cd-ingress.yaml
+  - sealed-gh-token.json
+  - sealed-gh-odic-secret.json
 
 # changes to config maps
 patches:
-- path: overlays/argo-cd-cm.yaml
-  target:
-    kind: ConfigMap
-- path: overlays/argocd-rbac.yaml
-  target:
-    kind: ConfigMap
-
+  - path: overlays/argo-cd-cm.yaml
+    target:
+      kind: ConfigMap
+  - path: overlays/argocd-rbac.yaml
+    target:
+      kind: ConfigMap
 # patchesStrategicMerge:
 # - overlays/kustomize-custom-tool.yaml
