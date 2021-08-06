@@ -9,6 +9,7 @@ resources:
 - namespace.yaml
 - argo-cd-ingress.yaml
 - sealed-gh-token.json
+- sealed-gh-odic-secret.json
 
 # changes to config maps
 patches:
