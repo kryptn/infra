@@ -3,7 +3,7 @@ kind: Kustomization
 
 resources:
 - argo-cd.yaml
-- argo-workflows.yaml
+# - argo-workflows.yaml
 - cert-manager.yaml
 - external-dns.yaml
 - ingress-nginx.yaml
