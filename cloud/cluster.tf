@@ -12,6 +12,17 @@ resource "digitalocean_kubernetes_cluster" "arq" {
   }
 
 }
+
+resource "digitalocean_kubernetes_node_pool" "autoscale-pool-01" {
+  cluster_id = digitalocean_kubernetes_cluster.arq.id
+  name       = "autoscale-pool-01"
+  size       = "s-1vcpu-2gb"
+  auto_scale = true
+  min_nodes  = 1
+  max_nodes  = 5
+}
+
+
 output "kubeconfig" {
   value = digitalocean_kubernetes_cluster.arq.kube_config.0.raw_config
 }
