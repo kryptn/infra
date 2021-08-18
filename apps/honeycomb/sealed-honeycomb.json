@@ -1,0 +1,22 @@
+{
+  "kind": "SealedSecret",
+  "apiVersion": "bitnami.com/v1alpha1",
+  "metadata": {
+    "name": "honeycomb",
+    "namespace": "presence",
+    "creationTimestamp": null
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "honeycomb",
+        "namespace": "presence",
+        "creationTimestamp": null
+      },
+      "data": null
+    },
+    "encryptedData": {
+      "api-key": "AgCtVDOUiiDi66IuvoOC1kYpmhQ01VLBY91kIABLzXbUijgZGBr6EIYg1VtIeVFOLMiWPKQwhl6+o7BT4be0XpOqBN6HVqAaVABVPx20wxKPw/h88Z2I9KAv7W0JVFnBTop35bVjNFybQoghJQkqDwqNSNg3G/A7F5A/2CE6Hw9rmHN/Y0WaWLWv4qYKl+7tR2n/M5WewWfj0Ie8RPJsShIYD4+9yfslyY7/0kbfFOP1oH/45IiNpYvEQwk8Hseleui6kp2JszQ+TCS6hm1F/WLndYs8iEfgUI2xtWxXGCfRH18yblvHXTxlAiomMXPyUS2W1lrtznGA9blm0zCAE7TV5oiAoXG9f2tJed+T36w9nOElD9lRIEU86Q0sT76cx4G55L9nrHq5wylaMXAALpiPKeN8744VsO4Z3U9/i4HTNnJJu0RU3eF+JTlwUZwR8fHgIReyfSJd4hVESg9A9oE7IOJ9l0529uAF1uuQcPfB2RnpVf/24j4kmHB2V99X1D1Bm7fcwD/R9hD2X/Nj3vcWAPthKrmjhpL1iLpQ2cO9pWSWtT+71ayp8uQqEGqYITt70rp6MLGW6ardh+XpnPMsD7bDSuX113XpZkwal+giOE6WyTTpyJHrvVA/xxRVHF8w8z50MmGoxkvXhCLXXxE6k23deT5DIoZijA+x1w0ms1YCy8B99slHV0gQEKa15R0pwV3yV0s3NFGU9ux6VIYZyUghbCO/VB0qH9jpDeR41w=="
+    }
+  }
+}
