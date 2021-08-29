@@ -5,7 +5,7 @@ namespace: argocd
 
 resources:
   # https://github.com/argoproj/argo-cd/releases/latest
-  - github.com/argoproj/argo-cd/manifests/cluster-install?ref=v2.1.0-rc2
+  - github.com/argoproj/argo-cd/manifests/cluster-install?ref=v2.1.1
   - namespace.yaml
   - argo-cd-ingress.yaml
   - sealed-gh-token.json
