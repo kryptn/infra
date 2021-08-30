@@ -19,5 +19,9 @@ patches:
   - path: overlays/argocd-rbac.yaml
     target:
       kind: ConfigMap
+  - path: patch-argocd-secret-extraneous.yaml
+    target:
+      kind: Secret
+      name: argocd-secret
 # patchesStrategicMerge:
 # - overlays/kustomize-custom-tool.yaml
