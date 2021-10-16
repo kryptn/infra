@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: vaultwarden-config
 data:
-  LOG_LEVEL: debug
+  LOG_LEVEL: trace
   DOMAIN: "https://pw.arq.dev"
   WEBSOCKET_ENABLED: "true"
   SMTP_HOST: "smtp.sendgrid.net"
