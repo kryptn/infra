@@ -15,6 +15,14 @@ spec:
         backend:
           serviceName: vaultwarden
           servicePort: 80
+  - host: pw.arq.dev
+    http:
+      paths:
+      - path: /notifications/hub
+        pathType: Exact
+        backend:
+          serviceName: vaultwarden
+          servicePort: 3012
   tls:
   - hosts:
     - pw.arq.dev
