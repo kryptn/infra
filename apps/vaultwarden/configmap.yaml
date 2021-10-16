@@ -4,13 +4,13 @@ metadata:
   name: vaultwarden-config
 data:
   DOMAIN: https://pw.arq.dev
-  SIGNUPS_ALLOWED: false
-  SIGNUPS_VERIFY: true
-  WEBSOCKET_ENABLED: true
+  SIGNUPS_ALLOWED: "false"
+  SIGNUPS_VERIFY: "true"
+  WEBSOCKET_ENABLED: "true"
   SMTP_HOST: smtp.sendgrid.net
   SMTP_FROM: pw@arq.dev
   SMTP_PORT: "465"
-  SMTP_SSL: false
-  SMTP_EXPLICIT_TLS: true
+  SMTP_SSL: "false"
+  SMTP_EXPLICIT_TLS: "true"
   SMTP_USERNAME: apikey
   SMTP_AUTH_MECHANISM: Login
