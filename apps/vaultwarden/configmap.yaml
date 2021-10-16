@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: vaultwarden-config
 data:
-  DOMAIN: "pw.arq.dev"
+  DOMAIN: "https://pw.arq.dev"
   WEBSOCKET_ENABLED: "true"
   SMTP_HOST: "smtp.sendgrid.net"
   SMTP_PORT: "465"
