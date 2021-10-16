@@ -43,13 +43,13 @@ spec:
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: httpbin-miris-ingress
+  name: httpbin-internal-ingress
   annotations:
     kubernetes.io/ingress.class: "nginx"
     cert-manager.io/cluster-issuer: letsencrypt
 spec:
   rules:
-  - host: httpbin.miris.io
+  - host: internal.arq.dev
     http:
       paths:
       - path: /
@@ -58,5 +58,5 @@ spec:
           servicePort: 80
   tls:
   - hosts:
-    - httpbin.miris.io
-    secretName: httpbin-miris-internal
+    - internal.arq.dev
+    secretName: httpbin-internal-cert
