@@ -6,7 +6,7 @@ data:
   DOMAIN: "https://pw.arq.dev"
   WEBSOCKET_ENABLED: "true"
   SMTP_HOST: "smtp.sendgrid.net"
-  SMTP_FROM: "pw.arq.dev"
+  SMTP_FROM: "keeper@pw.arq.dev"
   SMTP_PORT: "465"
   SMTP_SSL: "false"
   SMTP_EXPLICIT_TLS: "true"
