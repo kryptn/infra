@@ -19,3 +19,7 @@ kubectl -n external-dns create secret generic external-dns-digitalocean-token \
 kubectl -n websub-listener create secret generic websub-listener-config-secret \
   --dry-run=client --from-file=config.toml=secrets/websub_listener_config.toml -o json > secrets/websub_listener_config.toml.json \
   | kubeseal --controller-namespace sealed-secrets > apps/websub-listener/sealed-websub-config.json
+
+kubectl -n vaultwarden create secret generic vaultwarden-secret \
+--dry-run=client --from-env-file=secrets/vaultwarden.env -o json > secrets/vaultwarden.env.json \
+| kubeseal --controller-namespace sealed-secrets > apps/vaultwarden/sealed-vaultwarden-secret.json

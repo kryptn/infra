@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vaultwarde
+spec:
+  selector:
+    matchLabels:
+      app: vaultwarden
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: vaultwarden
+    spec:
+      volumes:
+      - name: vaultwarden-storage
+        persistentVolumeClaim:
+          claimName: vaultwarden-pvc
+      containers:
+      - name: vaultwarden
+        image: vaultwarden/server:1.22.2
+        ports:
+        - containerPort: 80
+        - containerPort: 3012
+        volumeMounts:
+          - mountPath: /data/
+            name: vaultwarden-storage
+        envFrom:
+          - configMapRef:
+              name: vaultwarden-config
+          - secretRef:
+              name: vaultwarden-secret

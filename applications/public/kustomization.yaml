@@ -6,3 +6,4 @@ resources:
 - httpbin.yaml
 - kryptn-com.yaml
 - websub-listener.yaml
+- vaultwarden.yaml
