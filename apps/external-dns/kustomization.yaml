@@ -6,7 +6,7 @@ namespace: external-dns
 # https://github.com/kubernetes-sigs/external-dns/releases/latest
 resources:
 - namespace.yaml
-- github.com/kubernetes-sigs/external-dns/kustomize?ref=v0.10.0
+- github.com/kubernetes-sigs/external-dns/kustomize?ref=v0.10.1
 - sealed-do-token.json
 
 patches:
