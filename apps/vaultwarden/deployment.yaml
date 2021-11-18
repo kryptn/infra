@@ -18,7 +18,7 @@ spec:
           claimName: vaultwarden-pvc
       containers:
       - name: vaultwarden
-        image: vaultwarden/server:1.23.0
+        image: vaultwarden/server:latest
         ports:
         - containerPort: 80
         - containerPort: 3012

@@ -11,3 +11,9 @@ resources:
 - ingress.yaml
 - configmap.yaml
 - sealed-vaultwarden-secret.json
+
+
+# https://github.com/dani-garcia/vaultwarden/releases
+images:
+- name: vaultwarden/server
+  newTag: 1.23.0
