@@ -45,5 +45,6 @@ jobs:
         uses: repo-sync/pull-request@v2
         with:
           pr_title: "Updating ${{ github.event.client_payload.project }}"
+          source_branch: "auto/update-newreleases"
           destination_branch: "main"
           github_token: ${{ secrets.GITHUB_TOKEN }}
