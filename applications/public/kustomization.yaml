@@ -7,3 +7,4 @@ resources:
 - kryptn-com.yaml
 - websub-listener.yaml
 - vaultwarden.yaml
+- newreleases-dispatch-action.yaml
