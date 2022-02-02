@@ -1,0 +1,9 @@
+on:
+  repository_dispatch:
+    types: [newreleases]
+
+jobs:
+  poc:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "dispatched"
