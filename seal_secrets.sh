@@ -21,5 +21,13 @@ kubectl -n websub-listener create secret generic websub-listener-config-secret \
   | kubeseal --controller-namespace sealed-secrets > apps/websub-listener/sealed-websub-config.json
 
 kubectl -n vaultwarden create secret generic vaultwarden-secret \
---dry-run=client --from-env-file=secrets/vaultwarden.env -o json > secrets/vaultwarden.env.json \
-| kubeseal --controller-namespace sealed-secrets > apps/vaultwarden/sealed-vaultwarden-secret.json
+  --dry-run=client --from-env-file=secrets/vaultwarden.env -o json > secrets/vaultwarden.env.json \
+  | kubeseal --controller-namespace sealed-secrets > apps/vaultwarden/sealed-vaultwarden-secret.json
+
+kubectl -n tailscale create secret generic tailscale-auth \
+  --dry-run=client --from-env-file=secrets/tailscale_key.env -o json > secrets/tailscale_key.env.json \
+  | kubeseal --controller-namespace sealed-secrets > apps/tailscale/sealed-tailscale-secret.json
+
+kubectl -n newreleases-dispatch-action create secret generic newreleases-dispatch-action-secret \
+  --dry-run=client --from-env-file=secrets/newreleases-dispatch-action.env -o json > secrets/newreleases-dispatch-action.env.json \
+  | kubeseal --controller-namespace sealed-secrets > apps/newreleases-dispatch-action/newreleases-dispatch-action-secret.json

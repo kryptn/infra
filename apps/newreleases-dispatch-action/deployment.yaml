@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: newreleases-dispatch-action
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: newreleases-dispatch-action
+    spec:
+      containers:
+      - name: newreleases-dispatch-action
+        image: ghcr.io/kryptn/newreleases-dispatch-action:latest
+        ports:
+        - containerPort: 3000
+        envFrom:
+        - secretRef:
+            name: newreleases-dispatch-action-secret
+      imagePullSecrets:
+        - name: ghcr-io
