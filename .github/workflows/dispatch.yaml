@@ -13,19 +13,23 @@ jobs:
     if: ${{ github.event.client_payload.provider == 'github' && github.event.client_payload.project == 'kryptn/newreleases-dispatch-action'}}
     runs-on: ubuntu-latest
     steps:
+
       - env:
           VERSION: github.event.client_payload.version
         run: echo "updating app to $VERSION"
+
       - name: Checkout
         uses: actions/checkout@v2
+
       - run: |
           git switch -c auto/update-newreleases
           git fetch
+
       - name: Update image tag
         uses: mikefarah/yq@master
-        working-directory: ./apps/newreleases-dispatch-action
         with:
-          cmd: yq -i '.images[].newTag = "$VERSION"' kustomization.yaml
+          cmd: yq -i '.images[].newTag = "$VERSION"' "./apps/newreleases-dispatch-action/kustomization.yaml"
+
       - working-directory: ./apps/newreleases-dispatch-action
         run: |
           cat kustomization.yaml
