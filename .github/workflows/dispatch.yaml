@@ -9,7 +9,7 @@ jobs:
       - run: echo "dispatched"
 
   update-app-poc:
-  - if: ${{ $github.event.client_payload.provider == "github" && $github.event.client_payload.project == "kryptn/newreleases-dispatch-action"}}
+  - if: github.event.client_payload.provider == "github" && github.event.client_payload.project == "kryptn/newreleases-dispatch-action"
     runs-on: ubuntu-latest
     steps:
       - env:
