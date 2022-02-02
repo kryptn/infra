@@ -21,13 +21,13 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          depth: 0
 
       - name: Prepare Git
         run: |
           git config --global user.name "kryptn"
           git config --global user.email "kryptn@users.noreply.github.com"
-          git fetch
-          git switch -c auto/update-newreleases || git switch auto/update-newreleases
 
       - name: Update image tag
         uses: mikefarah/yq@master
@@ -37,10 +37,13 @@ jobs:
       - name: Commit and Push Update
         working-directory: ./apps/newreleases-dispatch-action
         run: |
+          git fetch
+          git switch -c auto/update-newreleases || git switch auto/update-newreleases
           cat kustomization.yaml
           git add .
           git commit -m "automated bump to version ${{ github.event.client_payload.version }}"
           git push origin auto/update-newreleases
+          
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
