@@ -27,6 +27,7 @@ jobs:
         with:
           cmd: yq -i '.images[].newTag = "$VERSION"' kustomization.yaml
       - run: |
+          cat kustomization.yaml
           git add .
           git commit -m "automated bump to version $VERSION"
           git push origin auto/update-newreleases
