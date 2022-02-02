@@ -14,14 +14,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - env:
+      - name: Show Info
+        env:
           VERSION: ${{ github.event.client_payload.version }}
         run: echo "updating app to $VERSION"
 
       - name: Checkout
         uses: actions/checkout@v2
 
-      - run: |
+      - name: Prepare Git
+        run: |
           git config --global user.name "kryptn"
           git config --global user.email "kryptn@users.noreply.github.com"
           git fetch
@@ -32,7 +34,8 @@ jobs:
         with:
           cmd: yq -i '.images[].newTag = "${{ github.event.client_payload.version }}"' "./apps/newreleases-dispatch-action/kustomization.yaml"
 
-      - working-directory: ./apps/newreleases-dispatch-action
+      - name: Commit and Push Update
+        working-directory: ./apps/newreleases-dispatch-action
         run: |
           cat kustomization.yaml
           git add .
