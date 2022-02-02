@@ -15,7 +15,7 @@ jobs:
     steps:
 
       - env:
-          VERSION: github.event.client_payload.version
+          VERSION: ${{ github.event.client_payload.version }}
         run: echo "updating app to $VERSION"
 
       - name: Checkout
