@@ -4,6 +4,7 @@ on:
 
 jobs:
   poc:
+    if: ${{ github.event.client_payload.provider == 'github' && github.event.client_payload.project == 'kryptn/something-else'}}
     runs-on: ubuntu-latest
     steps:
       - run: echo "dispatched"
@@ -15,3 +16,18 @@ jobs:
       - env:
           VERSION: github.event.client_payload.version
         run: echo "updating app to $VERSION"
+      - name: Checkout
+        uses: actions/checkout@v2
+      - run: |
+        cd apps/newreleases-dispatch-action
+        git switch -c auto/update-newreleases
+        git fetch
+      - name: Set foobar to cool
+        uses: mikefarah/yq@master
+        with:
+          cmd: yq -i '.images[].newTag = "$VERSION"' kustomization.yaml
+      - run: |
+        git add .
+        git commit -m "automated bump to version $VERSION"
+        git push origin auto/update-newreleases
+
