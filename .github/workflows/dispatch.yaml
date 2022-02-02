@@ -29,6 +29,7 @@ jobs:
           git config --global user.name "kryptn"
           git config --global user.email "kryptn@users.noreply.github.com"
           git fetch --all
+          git pull
           git switch -c auto/update-newreleases || git switch auto/update-newreleases
 
       - name: Update image tag
