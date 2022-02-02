@@ -29,7 +29,7 @@ jobs:
         run: |
           git config --global user.name "kryptn"
           git config --global user.email "kryptn@users.noreply.github.com"
-          
+
           git switch -c auto/update-newreleases || git switch auto/update-newreleases
           git pull origin main
 
@@ -48,5 +48,6 @@ jobs:
         uses: repo-sync/pull-request@v2
         with:
           pr_title: "Updating ${{ github.event.client_payload.project }}"
+          source_branch: "auto/update-newreleases"
           destination_branch: "main"
           github_token: ${{ secrets.GITHUB_TOKEN }}
