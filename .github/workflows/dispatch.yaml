@@ -41,4 +41,9 @@ jobs:
           git add .
           git commit -m "automated bump to version ${{ github.event.client_payload.version }}"
           git push origin auto/update-newreleases
-
+      - name: pull-request
+        uses: repo-sync/pull-request@v2
+        with:
+          pr_title: "Updating ${{ github.event.client_payload.project }}"
+          destination_branch: "main"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
