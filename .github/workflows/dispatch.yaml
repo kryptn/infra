@@ -19,15 +19,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - run: |
-        cd apps/newreleases-dispatch-action
-        git switch -c auto/update-newreleases
-        git fetch
+          cd apps/newreleases-dispatch-action
+          git switch -c auto/update-newreleases
+          git fetch
       - name: Set foobar to cool
         uses: mikefarah/yq@master
         with:
           cmd: yq -i '.images[].newTag = "$VERSION"' kustomization.yaml
       - run: |
-        git add .
-        git commit -m "automated bump to version $VERSION"
-        git push origin auto/update-newreleases
+          git add .
+          git commit -m "automated bump to version $VERSION"
+          git push origin auto/update-newreleases
 
