@@ -22,18 +22,20 @@ jobs:
         uses: actions/checkout@v2
 
       - run: |
-          git switch -c auto/update-newreleases
+          git config --global user.name "kryptn"
+          git config --global user.email "kryptn@users.noreply.github.com"
           git fetch
+          git switch -c auto/update-newreleases || git switch auto/update-newreleases
 
       - name: Update image tag
         uses: mikefarah/yq@master
         with:
-          cmd: yq -i '.images[].newTag = "$VERSION"' "./apps/newreleases-dispatch-action/kustomization.yaml"
+          cmd: yq -i '.images[].newTag = "${{ github.event.client_payload.version }}"' "./apps/newreleases-dispatch-action/kustomization.yaml"
 
       - working-directory: ./apps/newreleases-dispatch-action
         run: |
           cat kustomization.yaml
           git add .
-          git commit -m "automated bump to version $VERSION"
+          git commit -m "automated bump to version ${{ github.event.client_payload.version }}"
           git push origin auto/update-newreleases
 
