@@ -18,7 +18,6 @@ jobs:
       branch: update-newreleases
       version: ${{ github.events.client_payload.version }}
       project: ${{ github.events.client_payload.project }}
-      token: ${{ secrets.GITHUB_TOKEN }}
 
       # - name: Show Info
       #   env:
