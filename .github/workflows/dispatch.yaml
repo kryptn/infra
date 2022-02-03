@@ -12,17 +12,34 @@ jobs:
   update-app-poc:
     if: ${{ github.event.client_payload.provider == 'github' && github.event.client_payload.project == 'kryptn/newreleases-dispatch-action'}}
     # if: ${{ contains(['kryptn/newreleases-dispatch-action', ], github.event.client_payload.project) }}
-    uses: kryptn/infra/.github/workflows/update-image.yaml@main
-    with:
-      app-dir: ./apps/newreleases-dispatch-action
-      branch: update-newreleases
-      version: ${{github.events.client_payload.version}}
-      project: ${{github.events.client_payload.project}}
+    runs-on: ubuntu-latest
+
+
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        ref: "main"
+
+      - name: update image
+        uses: kryptn/infra/.github/actions/update-image@main
+        with:
+          app-dir: ./apps/newreleases-dispatch-action
+          branch: update-newreleases
+          version: ${{github.events.client_payload.version}}
+          project: ${{github.events.client_payload.project}}
+
+
+
 
       # - name: Show Info
       #   env:
       #     VERSION: ${{ github.event.client_payload.version }}
       #   run: echo "updating app to $VERSION"
+
+
 
 
 
