@@ -32,7 +32,9 @@ jobs:
 
           # git switch -c auto/update-newreleases || git switch auto/update-newreleases
           # git pull origin auto/update-newreleases
-          git pull origin main --ff-only
+          # git pull origin main --ff-only
+          git rev-parse --abbrev-ref HEAD
+          git --no-pager log  --oneline -n 5
 
       - name: Update image tag
         uses: mikefarah/yq@master
@@ -43,13 +45,15 @@ jobs:
         working-directory: ./apps/newreleases-dispatch-action
         run: |
           git add .
+          git log -
           git commit -m "automated bump to version ${{ github.event.client_payload.version }}"
+          git rev-parse --abbrev-ref HEAD
           git pull origin auto/update-newreleases
           git push origin auto/update-newreleases
-      - name: pull-request
-        uses: repo-sync/pull-request@v2
-        with:
-          pr_title: "Updating ${{ github.event.client_payload.project }}"
-          source_branch: "auto/update-newreleases"
-          destination_branch: "main"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: pull-request
+      #   uses: repo-sync/pull-request@v2
+      #   with:
+      #     pr_title: "Updating ${{ github.event.client_payload.project }}"
+      #     source_branch: "auto/update-newreleases"
+      #     destination_branch: "main"
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
