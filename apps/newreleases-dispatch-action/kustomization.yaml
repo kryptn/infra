@@ -11,4 +11,4 @@ commonLabels:
   app: newreleases-dispatch-action
 images:
   - name: kryptn/newreleases-dispatch-action
-    newTag: ""
+    newTag: "github.events.client_payload.version"
