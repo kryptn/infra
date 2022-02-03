@@ -4,13 +4,23 @@ on:
 
 jobs:
 
-  update-app:
+  update-newreleases:
     if: ${{ github.event.client_payload.provider == 'github' && github.event.client_payload.project == 'kryptn/newreleases-dispatch-action'}}
     # if: ${{ contains(['kryptn/newreleases-dispatch-action', ], github.event.client_payload.project) }}
     uses: kryptn/infra/.github/workflows/update-image.yaml@main
     with:
       app-dir: ./apps/newreleases-dispatch-action
       branch: update-newreleases
+      version: ${{github.event.client_payload.version}}
+      project: ${{github.event.client_payload.project}}
+
+  update-argocd:
+    if: ${{ github.event.client_payload.provider == 'github' && github.event.client_payload.project == 'argoproj/argo-cd'}}
+    # if: ${{ contains(['kryptn/newreleases-dispatch-action', ], github.event.client_payload.project) }}
+    uses: kryptn/infra/.github/workflows/kustomize-build.yaml@main
+    with:
+      app-dir: ./apps/argo-cd
+      branch: update-argocd
       version: ${{github.event.client_payload.version}}
       project: ${{github.event.client_payload.project}}
 

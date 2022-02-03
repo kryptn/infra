@@ -1,0 +1,64 @@
+on:
+  workflow_call:
+    inputs:
+      app-dir:
+        required: true
+        type: string
+      branch:
+        required: true
+        type: string
+      version:
+        required: true
+        type: string
+      project:
+        required: true
+        type: string
+      base:
+        required: false
+        type: string
+        default: 'main'
+
+jobs:
+
+  kustomize-update-manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: "main"
+
+      - name: Prepare Git
+        run: |
+          git config --global user.name "kbot"
+          git config --global user.email "kryptn@users.noreply.github.com"
+          git fetch origin
+
+          # switch if exists, else create new from main
+          git switch auto/${{ inputs.branch }} || git switch -c auto/${{ inputs.branch }}
+          git --no-pager log  --oneline -n 5
+
+      - uses: imranismail/setup-kustomize@v1
+      - name: Generate updated manifests
+        working-directory: ${{ inputs.app-dir }}
+        run: ./generate.sh ${{ inputs.version }}
+
+      - name: Commit and Push Update
+        # working-directory: ${{ inputs.app-dir }}
+        run: |
+          git rev-parse --abbrev-ref HEAD
+          git --no-pager log  --oneline -n 5
+
+          git add .
+          git status
+          git commit -m "automated bump to version ${{ inputs.version }}"
+          git push origin auto/${{ inputs.branch }}
+
+      - name: pull-request
+        uses: repo-sync/pull-request@v2
+        with:
+          pr_title: "Updating ${{ inputs.project }}"
+          source_branch: "auto/${{ inputs.branch }}"
+          destination_branch: ${{ inputs.base }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
