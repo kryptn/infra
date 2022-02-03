@@ -49,9 +49,10 @@ jobs:
           git --no-pager log  --oneline -n 5
 
           git add .
+          git status
           git commit -m "automated bump to version ${{ github.event.client_payload.version }}"
           git rev-parse --abbrev-ref HEAD
-          git pull origin auto/update-newreleases-new
+          # git pull origin auto/update-newreleases-new
           git push origin auto/update-newreleases-new
       - name: pull-request
         uses: repo-sync/pull-request@v2
