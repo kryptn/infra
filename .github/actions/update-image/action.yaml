@@ -18,9 +18,8 @@ inputs:
     type: string
 
 runs:
-  using: "composite"
+  using: 'composite'
   steps:
-
     - name: Prepare Git
       shell: bash
       env:
@@ -35,7 +34,6 @@ runs:
         git --no-pager log  --oneline -n 5
 
     - name: Update image tag
-      shell: bash
       uses: mikefarah/yq@master
       env:
         VERSION: ${{inputs.version}}
@@ -58,7 +56,6 @@ runs:
         git push origin auto/$BRANCH
 
     - name: pull-request
-      shell: bash
       uses: repo-sync/pull-request@v2
       env:
         PROJECT: ${{inputs.project}}
