@@ -11,4 +11,4 @@ commonLabels:
   app: newreleases-dispatch-action
 images:
   - name: kryptn/newreleases-dispatch-action
-    newTag: ""
+    newTag: "v0.1.1"
