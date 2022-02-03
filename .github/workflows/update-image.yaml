@@ -17,6 +17,9 @@ on:
         required: false
         type: string
         default: 'main'
+    secrets:
+      token:
+        required: true
 
 jobs:
 
@@ -61,4 +64,4 @@ jobs:
           pr_title: "Updating ${{ inputs.project }}"
           source_branch: "auto/${{ inputs.branch }}"
           destination_branch: ${{ inputs.base }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.token }}
