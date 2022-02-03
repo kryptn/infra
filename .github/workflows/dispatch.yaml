@@ -23,15 +23,15 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-          ref: "auto/update-newreleases"
+          ref: "auto/update-newreleases-new"
 
       - name: Prepare Git
         run: |
           git config --global user.name "kryptn"
           git config --global user.email "kryptn@users.noreply.github.com"
 
-          # git switch -c auto/update-newreleases || git switch auto/update-newreleases
-          # git pull origin auto/update-newreleases
+          # git switch -c auto/update-newreleases-new || git switch auto/update-newreleases-new
+          # git pull origin auto/update-newreleases-new
           # git pull origin main --ff-only
           git rev-parse --abbrev-ref HEAD
           git --no-pager log  --oneline -n 5
@@ -46,16 +46,16 @@ jobs:
         run: |
           git rev-parse --abbrev-ref HEAD
           git --no-pager log  --oneline -n 5
-          
+
           git add .
           git commit -m "automated bump to version ${{ github.event.client_payload.version }}"
           git rev-parse --abbrev-ref HEAD
-          git pull origin auto/update-newreleases
-          git push origin auto/update-newreleases
-      # - name: pull-request
-      #   uses: repo-sync/pull-request@v2
-      #   with:
-      #     pr_title: "Updating ${{ github.event.client_payload.project }}"
-      #     source_branch: "auto/update-newreleases"
-      #     destination_branch: "main"
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+          git pull origin auto/update-newreleases-new
+          git push origin auto/update-newreleases-new
+      - name: pull-request
+        uses: repo-sync/pull-request@v2
+        with:
+          pr_title: "Updating ${{ github.event.client_payload.project }}"
+          source_branch: "auto/update-newreleases-new"
+          destination_branch: "main"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
