@@ -24,6 +24,7 @@ runs:
 
 
     - name: Prepare Git
+      shell: bash
       env:
         BRANCH: "auto/${{ inputs.branch }}"
       run: |
@@ -36,6 +37,7 @@ runs:
         git --no-pager log  --oneline -n 5
 
     - name: Update image tag
+      shell: bash
       uses: mikefarah/yq@master
       env:
         VERSION: ${{inputs.version}}
@@ -44,6 +46,7 @@ runs:
         cmd: yq -i '.images[].newTag = "$VERSION"' "$APP_DIR/kustomization.yaml"
 
     - name: Commit and Push Update
+      shell: bash
       env:
         BRANCH: "auto/${{ inputs.branch }}"
         VERSION: ${{inputs.version}}
@@ -57,6 +60,7 @@ runs:
         git push origin auto/$BRANCH
 
     - name: pull-request
+      shell: bash
       uses: repo-sync/pull-request@v2
       env:
         BRANCH: "auto/${{ inputs.branch }}"
