@@ -32,7 +32,7 @@ jobs:
 
           # git switch -c auto/update-newreleases || git switch auto/update-newreleases
           # git pull origin auto/update-newreleases
-          git pull origin main --rebase
+          git pull origin main
 
       - name: Update image tag
         uses: mikefarah/yq@master
@@ -44,6 +44,7 @@ jobs:
         run: |
           git add .
           git commit -m "automated bump to version ${{ github.event.client_payload.version }}"
+          git pull origin auto/update-newreleases
           git push origin auto/update-newreleases
       - name: pull-request
         uses: repo-sync/pull-request@v2
