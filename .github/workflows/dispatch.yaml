@@ -30,7 +30,7 @@ jobs:
           branch: update-newreleases
           version: ${{github.events.client_payload.version}}
           project: ${{github.events.client_payload.project}}
-
+          github-token: ${{github.GITHUB_TOKEN}}
 
 
 
