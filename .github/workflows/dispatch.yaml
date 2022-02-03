@@ -34,6 +34,7 @@ jobs:
           git switch -c auto/update-newreleases-new || git switch auto/update-newreleases-new
           # git pull origin auto/update-newreleases-new
           # git pull origin main --ff-only
+          git pull origin auto/update-newreleases-new || echo "no remote branch auto/update-newreleases-new"
           git rev-parse --abbrev-ref HEAD
           git --no-pager log  --oneline -n 5
 
@@ -52,7 +53,7 @@ jobs:
           git status
           git commit -m "automated bump to version ${{ github.event.client_payload.version }}"
           git rev-parse --abbrev-ref HEAD
-          # git pull origin auto/update-newreleases-new
+
           git push origin auto/update-newreleases-new
       - name: pull-request
         uses: repo-sync/pull-request@v2
