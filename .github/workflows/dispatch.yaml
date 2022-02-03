@@ -20,7 +20,7 @@ jobs:
           ref: "main"
 
       - name: update image
-        uses: ./.github/actions/update-image.yaml
+        uses: kryptn/infra/.github/actions/update-image.yaml@main
         with:
           app-dir: ./apps/newreleases-dispatch-action
           branch: update-newreleases
