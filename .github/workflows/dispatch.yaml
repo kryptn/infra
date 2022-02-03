@@ -44,8 +44,10 @@ jobs:
       - name: Commit and Push Update
         working-directory: ./apps/newreleases-dispatch-action
         run: |
+          git rev-parse --abbrev-ref HEAD
+          git --no-pager log  --oneline -n 5
+          
           git add .
-          git log -
           git commit -m "automated bump to version ${{ github.event.client_payload.version }}"
           git rev-parse --abbrev-ref HEAD
           git pull origin auto/update-newreleases
