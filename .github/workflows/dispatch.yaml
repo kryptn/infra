@@ -29,10 +29,12 @@ jobs:
         run: |
           git config --global user.name "kryptn"
           git config --global user.email "kryptn@users.noreply.github.com"
-          git pull
+          git remote -v
+          git branch -v -a
 
+          git fetch origin
           # git fetch origin auto/update-newreleases-new || echo "no remote branch auto/update-newreleases-new"
-          git switch -c auto/update-newreleases-new || git switch auto/update-newreleases-new
+          git switch -c auto/update-newreleases-new && echo "created new" || git switch auto/update-newreleases-new && echo "using existing"
           # git pull origin auto/update-newreleases-new
           # git pull origin main --ff-only
           git pull origin auto/update-newreleases-new || echo "no remote branch auto/update-newreleases-new"
