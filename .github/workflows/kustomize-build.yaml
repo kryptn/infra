@@ -74,7 +74,7 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const { TITLE, BODY, CVE, PROJECT, VERSION, BRANCH, ISSUE } = process.env
+            const { TITLE, BODY, CVE, PROJECT, VERSION, BRANCH } = process.env
 
             var body = []
             if(TITLE != ""){ body.push(TITLE) }
@@ -85,15 +85,17 @@ jobs:
 
             const project = PROJECT.split("/")
 
-            console.log(`TITLE: ${TITLE}, BODY: ${BODY}, CVE: ${CVE}, PROJECT: ${PROJECT}, VERSION: ${VERSION}, BRANCH: ${BRANCH}, ISSUE: ${ISSUE}`)
+            console.log(`TITLE: ${TITLE}, BODY: ${BODY}, CVE: ${CVE}, PROJECT: ${PROJECT}, VERSION: ${VERSION}, BRANCH: ${BRANCH}`)
             console.log(body)
             const pr = github.rest.pulls.list({
               owner: project[0],
               repo: project[1],
-              head: `${project[0]}:auto/${BRANCH}`})[0]
+              head: `auto/${BRANCH}`})
+
+            console.log(pr)
 
             github.rest.issues.createComment({
-              issue_number: pr.number,
+              issue_number: pr[0].number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: body.join("\n\n")
