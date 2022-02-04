@@ -90,7 +90,7 @@ jobs:
             const pr = github.rest.pulls.list({
               owner: project[0],
               repo: project[1],
-              head: BRANCH})[0]
+              head: `${project[0]}:auto/${BRANCH}`})[0]
 
             github.rest.issues.createComment({
               issue_number: pr.number,
