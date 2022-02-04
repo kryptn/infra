@@ -85,7 +85,8 @@ jobs:
 
             const project = PROJECT.split("/")
 
-            console.log("TITLE: ${TITLE}, BODY: ${BODY}, CVE: ${CVE}, PROJECT: ${PROJECT}, VERSION: ${VERSION}, BRANCH: ${BRANCH}, ISSUE: ${ISSUE}")
+            console.log(`TITLE: ${TITLE}, BODY: ${BODY}, CVE: ${CVE}, PROJECT: ${PROJECT}, VERSION: ${VERSION}, BRANCH: ${BRANCH}, ISSUE: ${ISSUE}`)
+            console.log(body)
             const pr = github.rest.pulls.list({
               owner: project[0],
               repo: project[1],
