@@ -85,11 +85,11 @@ jobs:
             const { TITLE, MESSAGE, CVE, PROJECT, VERSION, BRANCH } = process.env
 
             var body = []
-            if(TITLE != ""){ body.push(TITLE) }
+            if(TITLE != ""){ body.push(`## ${TITLE}`) }
             if(MESSAGE != ""){ body.push(MESSAGE) }
             if(CVE != ""){ body.push(CVE) }
 
-            body.push(`https://github.com/${PROJECT}/releases/tag/${VERSION}`)
+            body.push(`[release ${VERSION}](https://github.com/${PROJECT}/releases/tag/${VERSION})`)
 
             const { data } = await github.rest.pulls.list({
               owner: context.repo.owner,
