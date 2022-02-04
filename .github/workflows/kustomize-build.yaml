@@ -87,15 +87,15 @@ jobs:
 
             console.log(`TITLE: ${TITLE}, BODY: ${BODY}, CVE: ${CVE}, PROJECT: ${PROJECT}, VERSION: ${VERSION}, BRANCH: ${BRANCH}`)
             console.log(body)
-            const pr = github.rest.pulls.list({
+            const { data } = await github.rest.pulls.list({
               owner: project[0],
               repo: project[1],
               head: `auto/${BRANCH}`})
 
-            console.log(pr)
+            console.log(data)
 
             github.rest.issues.createComment({
-              issue_number: pr[0].number,
+              issue_number: data[0].number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: body.join("\n\n")
