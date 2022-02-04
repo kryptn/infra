@@ -70,10 +70,12 @@ jobs:
           CVE: ${{inputs.cve}}
           PROJECT: ${{inputs.project}}
           VERSION: ${{inputs.version}}
+          ISSUE: ${{steps.pull-request.pr_number}}
+
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const { TITLE, BODY, CVE, PROJECT, VERSION } = process.env
+            const { TITLE, BODY, CVE, PROJECT, VERSION, ISSUE } = process.env
 
             var body = []
             if(TITLE != ""){ body.push(TITLE) }
@@ -83,7 +85,7 @@ jobs:
             body.push(`https://github.com/${PROJECT}/releases/tag/${VERSION}`)
 
             github.rest.issues.createComment({
-              issue_number: context.issue.number,
+              issue_number: ISSUE,
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: body.join("\n\n")
