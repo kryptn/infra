@@ -2,7 +2,7 @@ resource "digitalocean_kubernetes_cluster" "arq" {
   name   = var.cluster_name
   region = var.do_region
   # Grab the latest version slug from `doctl kubernetes options versions`
-  version = "1.19.12-do.0"
+  version = "1.19.15-do.0"
   # tags    = ["staging"]
 
   # auto_upgrade  = true
@@ -15,14 +15,6 @@ resource "digitalocean_kubernetes_cluster" "arq" {
 
 }
 
-resource "digitalocean_kubernetes_node_pool" "autoscale-pool-01" {
-  cluster_id = digitalocean_kubernetes_cluster.arq.id
-  name       = "autoscale-pool-01"
-  size       = "s-1vcpu-2gb"
-  auto_scale = true
-  min_nodes  = 1
-  max_nodes  = 5
-}
 
 
 output "kubeconfig" {
