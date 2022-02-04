@@ -16,4 +16,4 @@ resources:
 # https://github.com/dani-garcia/vaultwarden/releases
 images:
 - name: vaultwarden/server
-  newTag: 1.23.0
+  newTag: 1.24.0
