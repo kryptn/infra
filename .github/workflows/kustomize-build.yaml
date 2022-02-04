@@ -84,7 +84,7 @@ jobs:
             body.push(`https://github.com/${PROJECT}/releases/tag/${VERSION}`)
 
             const project = PROJECT.split("/")
-            const pr = octokit.rest.pulls.list({
+            const pr = github.rest.pulls.list({
               owner: project[0],
               repo: project[1],
               head: BRANCH})[0]
