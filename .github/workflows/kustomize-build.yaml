@@ -70,12 +70,11 @@ jobs:
           CVE: ${{inputs.cve}}
           PROJECT: ${{inputs.project}}
           VERSION: ${{inputs.version}}
-          ISSUE: ${{steps.pull-request.pr_number}}
-
+          BRANCH: ${{inputs.branch}}
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const { TITLE, BODY, CVE, PROJECT, VERSION, ISSUE } = process.env
+            const { TITLE, BODY, CVE, PROJECT, VERSION, BRANCH, ISSUE } = process.env
 
             var body = []
             if(TITLE != ""){ body.push(TITLE) }
@@ -84,8 +83,14 @@ jobs:
 
             body.push(`https://github.com/${PROJECT}/releases/tag/${VERSION}`)
 
+            const project = PROJECT.split("/")
+            const pr = octokit.rest.pulls.list({
+              owner: project[0],
+              repo: project[1],
+              head: BRANCH})[0]
+
             github.rest.issues.createComment({
-              issue_number: ISSUE,
+              issue_number: pr.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: body.join("\n\n")
