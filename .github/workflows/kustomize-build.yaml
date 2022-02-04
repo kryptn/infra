@@ -88,8 +88,8 @@ jobs:
             console.log(`TITLE: ${TITLE}, BODY: ${BODY}, CVE: ${CVE}, PROJECT: ${PROJECT}, VERSION: ${VERSION}, BRANCH: ${BRANCH}`)
             console.log(body)
             const { data } = await github.rest.pulls.list({
-              owner: project[0],
-              repo: project[1],
+              owner: context.repo.owner,
+              repo: context.repo.repo,
               head: `auto/${BRANCH}`})
 
             console.log(data)
