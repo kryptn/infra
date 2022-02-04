@@ -35,3 +35,14 @@ jobs:
       branch: update-vaultwarden
       version: ${{github.event.client_payload.version}}
       project: ${{github.event.client_payload.project}}
+
+  update-external-dns:
+    if: ${{ github.event.client_payload.provider == 'github' && github.event.client_payload.project == 'kubernetes-sigs/external-dns'}}
+    uses: kryptn/infra/.github/workflows/kustomize-build.yaml@main
+    with:
+      app-dir: ./apps/external-dns
+      branch: update-external-dns
+      version: ${{github.event.client_payload.version}}
+      project: ${{github.event.client_payload.project}}
+      title: ${{github.event.client_payload.note.title}}
+      message: ${{github.event.client_payload.note.message}}
