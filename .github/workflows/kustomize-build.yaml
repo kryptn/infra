@@ -17,7 +17,7 @@ on:
         required: false
         type: string
         default: ''
-      body:
+      message:
         required: false
         type: string
         default: ''
@@ -74,7 +74,7 @@ jobs:
       - uses: actions/github-script@v5
         env:
           TITLE: ${{inputs.title}}
-          BODY: ${{inputs.body}}
+          MESSAGE: ${{inputs.message}}
           CVE: ${{inputs.cve}}
           PROJECT: ${{inputs.project}}
           VERSION: ${{inputs.version}}
@@ -82,19 +82,15 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const { TITLE, BODY, CVE, PROJECT, VERSION, BRANCH } = process.env
+            const { TITLE, MESSAGE, CVE, PROJECT, VERSION, BRANCH } = process.env
 
             var body = []
             if(TITLE != ""){ body.push(TITLE) }
-            if(BODY != ""){ body.push(BODY) }
+            if(MESSAGE != ""){ body.push(MESSAGE) }
             if(CVE != ""){ body.push(CVE) }
 
             body.push(`https://github.com/${PROJECT}/releases/tag/${VERSION}`)
 
-            const project = PROJECT.split("/")
-
-            console.log(`TITLE: ${TITLE}, BODY: ${BODY}, CVE: ${CVE}, PROJECT: ${PROJECT}, VERSION: ${VERSION}, BRANCH: ${BRANCH}`)
-            console.log(body)
             const { data } = await github.rest.pulls.list({
               owner: context.repo.owner,
               repo: context.repo.repo,
