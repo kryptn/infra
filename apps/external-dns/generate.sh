@@ -1,0 +1,1 @@
+kustomize build github.com/kubernetes-sigs/external-dns/kustomize?ref=$1 > generated-external-dns.yaml
