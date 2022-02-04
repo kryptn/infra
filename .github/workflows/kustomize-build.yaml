@@ -62,3 +62,31 @@ jobs:
           source_branch: "auto/${{ inputs.branch }}"
           destination_branch: ${{ inputs.base }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/github-script@v5
+        env:
+          TITLE: ${{inputs.note.title}}
+          BODY: ${{inputs.note.body}}
+          CVE: ${{inputs.cve}}
+          PROJECT: ${{inputs.project}}
+          VERSION: ${{inputs.version}}
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const { TITLE, BODY, CVE, PROJECT, VERSION } = process.env
+
+            var body = []
+            if(TITLE != ""){ body.push(TITLE) }
+            if(BODY != ""){ body.push(BODY) }
+            if(CVE != ""){ body.push(CVE) }
+
+            body.push(`https://github.com/${PROJECT}/releases/tag/${VERSION}`)
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: body.join("\n\n")
+            })
+
+
