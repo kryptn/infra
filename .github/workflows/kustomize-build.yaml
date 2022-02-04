@@ -13,6 +13,14 @@ on:
       project:
         required: true
         type: string
+      title:
+        required: false
+        type: string
+        default: ''
+      body:
+        required: false
+        type: string
+        default: ''
       base:
         required: false
         type: string
@@ -65,8 +73,8 @@ jobs:
 
       - uses: actions/github-script@v5
         env:
-          TITLE: ${{inputs.note.title}}
-          BODY: ${{inputs.note.body}}
+          TITLE: ${{inputs.title}}
+          BODY: ${{inputs.body}}
           CVE: ${{inputs.cve}}
           PROJECT: ${{inputs.project}}
           VERSION: ${{inputs.version}}

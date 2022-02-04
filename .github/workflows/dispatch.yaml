@@ -23,4 +23,6 @@ jobs:
       branch: update-argocd
       version: ${{github.event.client_payload.version}}
       project: ${{github.event.client_payload.project}}
+      title: ${{github.event.client_payload.note.title}}
+      body: ${{github.event.client_payload.note.body}}
 
