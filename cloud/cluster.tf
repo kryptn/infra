@@ -2,7 +2,7 @@ resource "digitalocean_kubernetes_cluster" "arq" {
   name   = var.cluster_name
   region = var.do_region
   # Grab the latest version slug from `doctl kubernetes options versions`
-  version = "1.19.15-do.0"
+  version = "1.20.15-do.0"
   # tags    = ["staging"]
 
   # auto_upgrade  = true
