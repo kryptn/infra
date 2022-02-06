@@ -1,0 +1,2 @@
+update version:
+    kustomize build github.com/argoproj/argo-cd/manifests/cluster-install?ref={{version}} > generated-argo-cd.yaml
