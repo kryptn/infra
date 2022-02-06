@@ -35,8 +35,8 @@ jobs:
       - run: |
           echo "valid: ${{ steps.meta.outputs.valid }}"
           echo "app dir: ${{ steps.meta.outputs.app_dir }}"
-          echo "branch_name dir: ${{ steps.meta.outputs.branch_name }}"
-          echo "version dir: ${{ steps.meta.outputs.version }}"
+          echo "branch_name: ${{ steps.meta.outputs.branch_name }}"
+          echo "version: ${{ steps.meta.outputs.version }}"
 
 
       - name: setup-kustomize
@@ -57,7 +57,7 @@ jobs:
           git fetch origin
 
           # switch if exists, else create new from main
-          git switch $BRANCH || git switch -c BRANCH
+          git switch $BRANCH || git switch -c $BRANCH
           git --no-pager log  --oneline -n 5
 
       - name: Just update
