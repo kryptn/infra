@@ -1,0 +1,23 @@
+on:
+  repository_dispatch:
+    types: [newreleases-test]
+
+jobs:
+
+  do-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: View context attributes
+        uses: actions/github-script@v5
+        with:
+          script: |
+            console.log(context)
+
+      - name: setup-kustomize
+        uses: imranismail/setup-kustomize@v1
+
+      - name: setup-helm
+        uses: azure/setup-helm@v1
+
+      - name: setup-just
+        uses: extractions/setup-just@v1
