@@ -30,6 +30,8 @@ jobs:
               core.setOutput('app_dir', projects[context.payload.client_payload.project].app_dir)
               core.setOutput('branch_name', projects[context.payload.client_payload.project].branch_name)
               core.setOutput('version', context.payload.client_payload.version)
+            } else {
+              core.setFailed(`Invalid project provided: ${context.payload.client_payload.project}`)
             }
 
       - run: |
