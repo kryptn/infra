@@ -1,14 +1,15 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - namespace.yaml
-  - deployment.yaml
-  - ingress.yaml
-  - svc.yaml
-  - newreleases-dispatch-action-secret.json
+- namespace.yaml
+- deployment.yaml
+- ingress.yaml
+- svc.yaml
+- newreleases-dispatch-action-secret.json
 namespace: newreleases-dispatch-action
 commonLabels:
   app: newreleases-dispatch-action
 images:
-  - name: kryptn/newreleases-dispatch-action
-    newTag: v0.1.4
+- name: kryptn/newreleases-dispatch-action
+  newName: kryptn/newreleases-dispatch-action
+  newTag: v0.1.5
