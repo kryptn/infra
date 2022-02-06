@@ -1,0 +1,2 @@
+update version:
+    kustomize edit set image kryptn/newreleases-dispatch-action={{version}}
