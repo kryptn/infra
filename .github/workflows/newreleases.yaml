@@ -7,14 +7,15 @@ jobs:
   do-update:
     runs-on: ubuntu-latest
     steps:
+
       - name: Checkout
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
           ref: "main"
 
-
       - name: View context attributes
+        id: meta
         uses: actions/github-script@v5
         with:
           script: |
@@ -22,14 +23,21 @@ jobs:
             const projects = require("./.github/workflows/newreleases.json")
             console.log(projects)
 
-            const valid = projects[context.client_payload.project] != undefined
+            const valid = projects[context.payload.client_payload.project] != undefined
             core.setOutput('valid', valid)
 
             if (valid) {
-              core.setOutput('app_dir', projects[context.client_payload.project].app_dir)
-              core.setOutput('branch_name', projects[context.client_payload.project].branch_name)
-              core.setOutput('version', context.client_payload.version)
+              core.setOutput('app_dir', projects[context.payload.client_payload.project].app_dir)
+              core.setOutput('branch_name', projects[context.payload.client_payload.project].branch_name)
+              core.setOutput('version', context.payload.client_payload.version)
             }
+
+      - run: |
+          echo "valid: ${{ steps.meta.outputs.valid }}"
+          echo "app dir: ${{ steps.meta.outputs.app_dir }}"
+          echo "branch_name dir: ${{ steps.meta.outputs.branch_name }}"
+          echo "version dir: ${{ steps.meta.outputs.version }}"
+
 
       - name: setup-kustomize
         uses: imranismail/setup-kustomize@v1
