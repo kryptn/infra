@@ -1,0 +1,6 @@
+{
+    "argoproj/argo-cd": {
+        "app_dir": "./apps/argo-cd/",
+        "branch_name": "auto/update-argo-cd"
+    }
+}

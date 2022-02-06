@@ -12,6 +12,17 @@ jobs:
         with:
           script: |
             console.log(context)
+            const projects = require("./github/workflows/newreleases.json")
+            console.log(projects)
+
+            const valid = projects[context.client_payload.project] != undefined
+            core.setOutput('valid', valid)
+
+            if (valid) {
+              core.setOutput('app_dir', projects[context.client_payload.project].app_dir)
+              core.setOutput('branch_name', projects[context.client_payload.project].branch_name)
+              core.setOutput('version', context.client_payload.version)
+            }
 
       - name: setup-kustomize
         uses: imranismail/setup-kustomize@v1
