@@ -9,7 +9,7 @@
         }
     },
     "kryptn/newreleases-dispatch-action": {
-        "app_dir": "./apps/kryptn/newreleases-dispatch-action/",
+        "app_dir": "./apps/newreleases-dispatch-action/",
         "branch_name": "auto/update-newreleases-dispatcher",
         "project": {
             "provider": "github",
