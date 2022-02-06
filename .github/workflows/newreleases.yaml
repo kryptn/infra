@@ -99,15 +99,15 @@ jobs:
 
 
             if (release.note?.title != undefined) {
-              body.push(`## ${note.title}`)
+              body.push(`## ${release.note.title}`)
             }
 
             if (release.note?.message != undefined) {
-              body.push(note.message)
+              body.push(release.note.message)
             }
 
             if (release.cve != undefined) {
-              body.push(release.cve)
+              body.push(`### CVEs\n\n${release.cve}`)
             }
 
             body.push(`[release ${release.version}](https://github.com/${PROJECT}/releases/tag/${release.version})`)
