@@ -16,5 +16,32 @@
             "email_notification": "none",
             "webhooks": []
         }
+    },
+    "dani-garcia/vaultwarden": {
+        "app_dir": "./apps/vaultwarden/",
+        "branch_name": "auto/update-vaultwarden",
+        "project": {
+            "provider": "github",
+            "email_notification": "none",
+            "webhooks": []
+        }
+    },
+    "kubernetes-sigs/external-dns": {
+        "app_dir": "./apps/external-dns/",
+        "branch_name": "auto/update-external-dns",
+        "project": {
+            "provider": "github",
+            "email_notification": "none",
+            "webhooks": []
+        }
+    },
+    "jetstack/cert-manager": {
+        "app_dir": "./apps/cert-manager/",
+        "branch_name": "auto/update-cert-manager",
+        "project": {
+            "provider": "github",
+            "email_notification": "none",
+            "webhooks": []
+        }
     }
 }
