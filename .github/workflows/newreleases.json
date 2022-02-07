@@ -35,13 +35,14 @@
             "webhooks": []
         }
     },
-    "jetstack/cert-manager": {
+    "cert-manager/cert-manager": {
         "app_dir": "./apps/cert-manager/",
         "branch_name": "auto/update-cert-manager",
         "project": {
             "provider": "github",
             "email_notification": "none",
-            "webhooks": []
+            "webhooks": [],
+            "exclude_version_regexp": [{"value": "-beta"}, {"value": "-alpha"}]
         }
     },
     "bitnami-labs/sealed-secrets": {

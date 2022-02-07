@@ -1,2 +1,2 @@
 update version:
-    wget https://github.com/jetstack/cert-manager/releases/download/{{version}}/cert-manager.yaml -O cert-manager.yaml
+    wget https://github.com/cert-manager/cert-manager/releases/download/{{version}}/cert-manager.yaml -O cert-manager.yaml
