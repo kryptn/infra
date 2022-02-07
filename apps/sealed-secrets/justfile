@@ -1,0 +1,2 @@
+update version:
+    wget https://github.com/bitnami-labs/sealed-secrets/releases/download/{{version}}/controller.yaml -O controller.yaml
