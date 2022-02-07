@@ -1,0 +1,2 @@
+update version:
+    kustomize build github.com/kubernetes-sigs/external-dns/kustomize?ref={{version}} > generated-external-dns.yaml

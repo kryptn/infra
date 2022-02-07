@@ -1,0 +1,2 @@
+update version:
+    kustomize edit set image vaultwarden/server:latest=vaultwarden/server:{{version}}
