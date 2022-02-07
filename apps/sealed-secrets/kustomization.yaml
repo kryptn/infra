@@ -5,12 +5,8 @@ kind: Kustomization
 resources:
 - namespace.yaml
 - controller.yaml
-# wget https://github.com/bitnami-labs/sealed-secrets/releases/download/v0.16.0/controller.yaml -O controller.yaml
-
-
 
 namespace: sealed-secrets
 
 commonLabels:
   app: sealed-secrets
-

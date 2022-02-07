@@ -43,5 +43,14 @@
             "email_notification": "none",
             "webhooks": []
         }
+    },
+    "bitnami-labs/sealed-secrets": {
+        "app_dir": "./apps/sealed-secrets/",
+        "branch_name": "auto/update-sealed-secrets",
+        "project": {
+            "provider": "github",
+            "email_notification": "none",
+            "webhooks": []
+        }
     }
 }
