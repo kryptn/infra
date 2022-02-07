@@ -10,6 +10,9 @@ namespace: newreleases-dispatch-action
 commonLabels:
   app: newreleases-dispatch-action
 images:
+- name: ghcr.io/kryptn/newreleases-dispatch-action
+  newName: ghcr.io/kryptn/newreleases-dispatch-action
+  newTag: v0.1.6
 - name: ghcr.io/kryptn/newreleases-dispatch-action:latest
   newName: ghcr.io/kryptn/newreleases-dispatch-action
   newTag: v0.1.4
