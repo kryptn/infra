@@ -97,13 +97,14 @@ jobs:
             var body = []
             const release = context.payload.client_payload
 
+            if (release.note != undefined) {
+              if (release.note.title != undefined) {
+                body.push(`## ${release.note.title}`)
+              }
 
-            if (release.note?.title != undefined) {
-              body.push(`## ${release.note.title}`)
-            }
-
-            if (release.note?.message != undefined) {
-              body.push(release.note.message)
+              if (release.note.message != undefined) {
+                body.push(release.note.message)
+              }
             }
 
             if (release.cve != undefined) {
