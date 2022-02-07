@@ -12,7 +12,7 @@ commonLabels:
 images:
 - name: ghcr.io/kryptn/newreleases-dispatch-action
   newName: ghcr.io/kryptn/newreleases-dispatch-action
-  newTag: v0.1.6
+  newTag: v0.2.0
 - name: ghcr.io/kryptn/newreleases-dispatch-action:latest
   newName: ghcr.io/kryptn/newreleases-dispatch-action
   newTag: v0.1.4
