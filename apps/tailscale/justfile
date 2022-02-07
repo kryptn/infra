@@ -1,0 +1,4 @@
+update version:
+    helm repo add mvisonneau https://charts.visonneau.fr
+    helm repo update
+    helm template tailscale-subnet-router mvisonneau/tailscale-relay --version={{version}} > generated-helm-tailscale.yaml

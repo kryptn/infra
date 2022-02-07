@@ -10,3 +10,4 @@ resources:
   - nats-operator.yaml
   - sealed-secrets.yaml
   - honeycomb.yaml
+  - tailscale.yaml

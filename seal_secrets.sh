@@ -24,7 +24,7 @@ kubectl -n vaultwarden create secret generic vaultwarden-secret \
   --dry-run=client --from-env-file=secrets/vaultwarden.env -o json > secrets/vaultwarden.env.json \
   | kubeseal --controller-namespace sealed-secrets > apps/vaultwarden/sealed-vaultwarden-secret.json
 
-kubectl -n tailscale create secret generic tailscale-auth \
+kubectl -n tailscale create secret generic tailscale-relay-config \
   --dry-run=client --from-env-file=secrets/tailscale_key.env -o json > secrets/tailscale_key.env.json \
   | kubeseal --controller-namespace sealed-secrets > apps/tailscale/sealed-tailscale-secret.json
 
