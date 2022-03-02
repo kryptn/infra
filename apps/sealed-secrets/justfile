@@ -1,2 +1,4 @@
 update version:
-    wget https://github.com/bitnami-labs/sealed-secrets/releases/download/{{version}}/controller.yaml -O controller.yaml
+    helm repo add sealed-secrets https://bitnami-labs.github.io/sealed-secrets
+    helm repo update
+    helm template sealed-secrets/sealed-secrets --version {{trim_start_match(version, 'helm-v')}} > sealed-secrets.yaml
