@@ -20,5 +20,8 @@ spec:
         envFrom:
         - secretRef:
             name: newreleases-dispatch-action-secret
+        env:
+          - name: RUST_LOG
+            value: "info"
       imagePullSecrets:
         - name: ghcr-io
