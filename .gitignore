@@ -33,5 +33,8 @@ override.tf.json
 .terraformrc
 terraform.rc
 
+*.env.json
+*.env
+
 
 .history/
