@@ -9,5 +9,5 @@ resources:
   - ingress-nginx.yaml
   - nats-operator.yaml
   - sealed-secrets.yaml
-  - honeycomb.yaml
+  # - honeycomb.yaml
   - tailscale.yaml
