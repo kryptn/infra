@@ -111,7 +111,7 @@ jobs:
               body.push(`### CVEs\n\n${release.cve}`)
             }
 
-            body.push(`[release ${release.version}](https://github.com/${PROJECT}/releases/tag/${release.version})`)
+            body.push(`[release ${release.version}](https://github.com/${release.project}/releases/tag/${release.version})`)
 
             const { data } = await github.rest.pulls.list({
               owner: context.repo.owner,
