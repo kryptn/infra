@@ -9,3 +9,4 @@ resources:
 - ./loki
 - ./tempo
 - ./agent-operator
+- ./logsinstance.yaml
