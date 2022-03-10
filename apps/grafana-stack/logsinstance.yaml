@@ -6,7 +6,7 @@ metadata:
     agent: grafana-agent-logs
 spec:
   clients:
-  - url: "http://loki-simple-scalable:3100"
+  - url: "http://loki-simple-scalable:3100/loki/api/v1/push"
 
 
   # Supply an empty namespace selector to look in all namespaces. Remove
