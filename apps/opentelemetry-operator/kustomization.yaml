@@ -5,3 +5,4 @@ namespace: opentelemetry
 
 resources:
 - opentelemetry-operator.yaml
+- ../podlogs
