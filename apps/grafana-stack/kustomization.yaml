@@ -9,5 +9,6 @@ resources:
 - ./loki
 - ./tempo
 - ./agent-operator
+- ./agent.yaml
 - ./logsinstance.yaml
 - ./podlogs.yaml
