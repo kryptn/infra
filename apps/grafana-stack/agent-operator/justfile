@@ -1,0 +1,3 @@
+
+update version:
+    helm template grafana-agent-operator --repo https://grafana.github.io/helm-charts --version {{version}} --values values.yaml grafana-agent-operator > grafana-agent.yaml
