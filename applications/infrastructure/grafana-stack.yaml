@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: grafana-stack
+    namespace: olly
     server: https://kubernetes.default.svc
   project: infrastructure
   source:
