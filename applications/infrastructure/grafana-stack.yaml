@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: grafana-stack
+  namespace: argocd
+spec:
+  destination:
+    namespace: grafana-stack
+    server: https://kubernetes.default.svc
+  project: infrastructure
+  source:
+    path: apps/grafana-stack
+    repoURL: https://github.com/kryptn/infra.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated: {}
