@@ -6,6 +6,7 @@ resources:
 - ingress.yaml
 - svc.yaml
 - newreleases-dispatch-action-secret.json
+- ../podlogs
 namespace: newreleases-dispatch-action
 commonLabels:
   app: newreleases-dispatch-action

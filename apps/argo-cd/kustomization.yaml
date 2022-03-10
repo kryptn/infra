@@ -10,6 +10,7 @@ resources:
   - argo-cd-ingress.yaml
   - sealed-gh-token.json
   - sealed-gh-odic-secret.json
+  - ../podlogs
 
 # changes to config maps
 patches:
