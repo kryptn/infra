@@ -5,6 +5,7 @@ resources:
 - deployment.yaml
 - ingress.yaml
 - svc.yaml
+- ../podlogs
 
 namespace: httpbin
 
