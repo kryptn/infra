@@ -1,0 +1,5 @@
+
+
+
+update version:
+    helm template tempo --repo https://grafana.github.io/helm-charts --version {{version}} --values values.yaml tempo > tempo.yaml

@@ -1,0 +1,3 @@
+
+update version:
+    helm template loki-simple-scalable --repo https://grafana.github.io/helm-charts --version {{version}} --values values.yaml loki > loki.yaml
