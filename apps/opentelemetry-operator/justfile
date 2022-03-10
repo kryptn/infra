@@ -1,0 +1,2 @@
+update version:
+    wget https://github.com/open-telemetry/opentelemetry-operator/releases/download/{{version}}/opentelemetry-operator.yaml -O opentelemetry-operator.yaml

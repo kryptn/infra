@@ -9,6 +9,7 @@ resources:
   - grafana-stack.yaml
   - ingress-nginx.yaml
   - nats-operator.yaml
+  - opentelemetry-operator.yaml
   - sealed-secrets.yaml
   # - honeycomb.yaml
   - tailscale.yaml
