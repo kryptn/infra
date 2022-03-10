@@ -10,3 +10,4 @@ resources:
 - ./tempo
 - ./agent-operator
 - ./logsinstance.yaml
+- ./podlogs.yaml
