@@ -6,3 +6,9 @@ namespace: prometheus-stack
 resources:
 - kube-prometheus-stack.yaml
 - namespace.yaml
+
+patches:
+- path: replace-annotation-crd-patch.yaml
+  target:
+    kind: CustomResourceDefinition
+    name: prometheuses.monitoring.coreos.com
