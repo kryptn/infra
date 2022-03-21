@@ -27565,8 +27565,6 @@ spec:
         runAsNonRoot: true
         runAsUser: 65534
       serviceAccountName: kube-prometheus-stack-operator
-      hostNetwork: true
-      dnsPolicy: ClusterFirstWithHostNet
 ---
 # Source: kube-prometheus-stack/templates/alertmanager/alertmanager.yaml
 apiVersion: monitoring.coreos.com/v1
