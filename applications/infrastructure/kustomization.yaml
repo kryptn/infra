@@ -10,7 +10,7 @@ resources:
   - ingress-nginx.yaml
   - nats-operator.yaml
   - opentelemetry-operator.yaml
-  - prometheus-stack.yaml
+  # - prometheus-stack.yaml
   - sealed-secrets.yaml
   # - honeycomb.yaml
   - tailscale.yaml
