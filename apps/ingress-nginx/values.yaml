@@ -1,0 +1,4 @@
+controller:
+  service:
+    annotations:
+      external-dns.alpha.kubernetes.io/hostname: arq.dev,*.arq.dev,kryptn.com,*.kryptn.com
