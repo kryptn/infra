@@ -1,2 +1,2 @@
 update version:
-    helm template sealed-secrets --repo="https://bitnami-labs.github.io/sealed-secrets" --version {{trim_start_match(version, 'helm-v')}} --include-crds sealed-secrets > sealed-secrets.yaml
+    helm template sealed-secrets --repo="https://bitnami-labs.github.io/sealed-secrets" --version {{trim_start_match(version, 'helm-v')}} --include-crds --values values.yaml sealed-secrets > sealed-secrets.yaml

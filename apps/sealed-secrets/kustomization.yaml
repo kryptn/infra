@@ -10,3 +10,8 @@ namespace: sealed-secrets
 
 commonLabels:
   app: sealed-secrets
+
+patches:
+- path: fix-service-port.yaml
+  target:
+    kind: Service

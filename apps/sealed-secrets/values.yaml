@@ -1,0 +1,4 @@
+fullnameOverride: "sealed-secrets"
+## @param namespace Namespace where to deploy the Sealed Secrets controller
+##
+namespace: "sealed-secrets"
