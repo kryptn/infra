@@ -1,2 +1,9 @@
 update version:
     wget https://github.com/cert-manager/cert-manager/releases/download/{{version}}/cert-manager.yaml -O cert-manager.yaml
+
+seal-secret namespace secret_name file:
+    kubectl -n {{namespace}} create secret generic {{secret_name}} --dry-run=client --from-env-file={{file}} -o json > {{file}}.json
+    kubeseal --controller-namespace sealed-secrets --controller-name sealed-secrets < {{file}}.json > sealed-{{secret_name}}.json
+
+seal-secrets:
+    just seal-secret external-dns cert-manager-digitalocean-token do_token.env
