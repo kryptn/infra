@@ -8,8 +8,8 @@ resources:
   - generated-argo-cd.yaml
   - namespace.yaml
   - argo-cd-ingress.yaml
-  - sealed-gh-token.json
-  - sealed-gh-odic-secret.json
+  - sealed-argocd-github-token.json
+  - sealed-argocd-github-oidc-token.json
 
 # changes to config maps
 patches:
@@ -19,9 +19,4 @@ patches:
   - path: overlays/argocd-rbac.yaml
     target:
       kind: ConfigMap
-  - path: patch-remove-argocd-secret.yaml
-    target:
-      kind: Secret
-      name: argocd-secret
-# patchesStrategicMerge:
-# - overlays/kustomize-custom-tool.yaml
+

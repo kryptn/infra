@@ -112,5 +112,5 @@ data:
         name: GitHub
         config:
           clientID: 3f6eb298c1a35668a738
-          clientSecret: $argo-cd-github-odic-token:odic_client_secret
+          clientSecret: $argo-cd-github-oidc-token:oidc_client_secret
           loadAllGroups: true

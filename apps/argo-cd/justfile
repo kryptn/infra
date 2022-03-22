@@ -1,2 +1,10 @@
 update version:
     kustomize build github.com/argoproj/argo-cd/manifests/cluster-install?ref={{version}} > generated-argo-cd.yaml
+
+seal-secret namespace secret_name file:
+    kubectl -n {{namespace}} create secret generic {{secret_name}} --dry-run=client --from-env-file={{file}} -o json > {{file}}.json
+    kubeseal --controller-namespace sealed-secrets --controller-name sealed-secrets < {{file}}.json > sealed-{{secret_name}}.json
+
+seal-secrets:
+    just seal-secret argocd argocd-github-token secrets/github_token.env
+    just seal-secret argocd argocd-github-oidc-token secrets/github_oidc_client_secret.env

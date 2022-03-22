@@ -1,1 +1,0 @@
-kustomize build github.com/argoproj/argo-cd/manifests/cluster-install?ref=$1 > generated-argo-cd.yaml

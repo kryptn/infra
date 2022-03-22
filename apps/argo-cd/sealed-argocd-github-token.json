@@ -1,0 +1,23 @@
+{
+  "kind": "SealedSecret",
+  "apiVersion": "bitnami.com/v1alpha1",
+  "metadata": {
+    "name": "argocd-github-token",
+    "namespace": "argocd",
+    "creationTimestamp": null
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "argocd-github-token",
+        "namespace": "argocd",
+        "creationTimestamp": null
+      },
+      "data": null
+    },
+    "encryptedData": {
+      "github_token": "AgBu9LU9dH6VyZmmSIbY6AV0sTwJEZ33Sh0rpNsl4qj0IoTPSws5hTIS6LHx2Mpwb5UacHfteZ4pRs91Ixt0UaQoA11eS2xWJQjam/lC7zyqObthuG09o01gd0qlQSl+6LjW/DwQrRp1KjRRz3LnlHZdkDSh+m48F5zESNCY8wC3LAl+twCl9zV1rlCBiFwYxOgGEy1gpahESlu3j/plKCgF2QVhk3ru7b2qnW0RLQCXyeH5BBVOu1/P/a7Yec1ZR4V69vSdwnmegOEbIfAc9qRGHIfphkBqT64zg7vyVL7lzzyVR6NLP4hVsA4fcoAGpfeUOORX+UDEVSdF+c/rzWtzbCFpJzKrT1Qz26wrp+2qXWDdvRHHTNOQmrHNEVI9m6JnXZHD5DE9Ya20Dp9z32PT/5bvg6l+FA+FcFcGYWpsvMRUJ8d152OrMrxdNsxoM0DztquxIRxsO56a5a+uZO8p3XptEnKBAd8wcj3rkpU2zsrrtWLH+3bZGmEA9S3aVK8RfrGhDOx8OUKWZDI4PplImkr9HrazLs5adMX8RFz7CvcnqtbGcacXnh4dWmcE3NThl9XEJlFMhXCprCOg3W74Sx1Ll8UkRX3dATECIEkoBQLxE87FnL24B7eHgQKe6S8a9P0qcDrX9OeIEo4uROBs0p7r1fWEWLkfoVCMU2ZvwzeJHKgw/bRnvmeJQaCGy/IdZTAaflaOAFtEjluLGsqrz4RGT27QQJ8f2GfbSWi1XFOnab9hXI4D",
+      "github_username": "AgBcJ7Ko5eB80m1QmRlKatQh5Ob6IP6SuHMfDKF/40ERJ4qOSZGEUOQW7wWqPt2jPBycO6TGd+aMexHQNFk1mxY6CB50q+n0B29//2sFrYSbr9RJzK5E1oXVfw6F1vVC6JgJBcz33cu/Yh7uBP/9/+85K21nWbKxbe1Y7iGzBBcNREy7kSGDxCimS4NDhCHNbDggBNARopM6Rfij8wQzUitXiXW5DTYdcmSD6Rpi//lC88awJHNgUmH3e7d2ot0ohz+jt4euhJmntOoQfAfMjiSAXQsNTAxccbB+fu/ZOtqIURULWKn0YBN0gGO3EHhPqhB4jjZjufK8xXwARuKcXmJ5nGQjp4U55p53fHonhFaVdMs74vHE0rOxdbROLZWrHNqsHBNoN74+XarIFl5WUxyebwOd6Zmu590mOJnVATjaXpRA6egQodLDHmm3AjLRImjtikHXCUOMdSkkijXVJtoi9HvYgfAdLTTbFdB68dw0X+uP5kJpOLHQgal0h+rg+JnQeSI8Lk7QtejsZLy37zxgR6bvaXTUWBOedche7kUVSnAe5YirkZMwCU3c3UBq+TKejvJHs9S1Tmn+kuJjAp1z1E4Cg9tVUXvFQn4DTEw/IkxaQN20vGFFS19jSwWTWfk3dSV7LBOwOwEdY9AsJf4v53NCoQ2taQH+KhVVb/MMM9Wft/g6+9/tTQ916A5H4f1RfjOeLnM="
+    }
+  }
+}
