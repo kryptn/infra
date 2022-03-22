@@ -4,7 +4,7 @@ step1:
     kustomize build ../apps/ingress-nginx | kubectl apply -f -
 
 step2:
-    just ../apps/argo-cd/ seal-secrets
+    just ../ seal-all-secrets
 
 step3:
     kustomize build ../apps/external-dns/ | kubectl apply -f -
