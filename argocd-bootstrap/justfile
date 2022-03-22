@@ -7,5 +7,8 @@ step2:
     just ../ seal-all-secrets
 
 step3:
+    kustomize build ../apps/cert-manager/ | kubectl apply -f -
     kustomize build ../apps/external-dns/ | kubectl apply -f -
+
+step4:
     kustomize build ../apps/argo-cd/ | kubectl apply -f -
