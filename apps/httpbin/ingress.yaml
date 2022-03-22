@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: httpbin-ingress
@@ -10,16 +10,18 @@ spec:
   - host: httpbin.arq.dev
     http:
       paths:
-      - path: /
+      - pathType: ImplementationSpecific
         backend:
-          serviceName: httpbin-service
-          servicePort: 80
+          service:
+            name: httpbin-service
+            port:
+              number: 80
   tls:
   - hosts:
     - httpbin.arq.dev
-    secretName: httpbin-cert
+    secretName: httpbin-arqdev-cert
 ---
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: httpbin-k-ingress
@@ -31,11 +33,13 @@ spec:
   - host: httpbin.kryptn.com
     http:
       paths:
-      - path: /
+      - pathType: ImplementationSpecific
         backend:
-          serviceName: httpbin-service
-          servicePort: 80
+          service:
+            name: httpbin-service
+            port:
+              number: 80
   tls:
   - hosts:
     - httpbin.kryptn.com
-    secretName: httpbin-k-cert
+    secretName: httpbin-kryptncom-cert
