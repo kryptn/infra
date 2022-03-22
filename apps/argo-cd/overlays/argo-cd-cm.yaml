@@ -9,7 +9,7 @@ metadata:
 data:
   url: https://argocd.arq.dev
   users.anonymous.enabled: "false"
-  admin.enabled: "false"
+  admin.enabled: "true"
   repository.credentials: |
     - url: https://github.com/kryptn/
       passwordSecret:
