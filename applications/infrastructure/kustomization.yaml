@@ -8,7 +8,7 @@ resources:
   - external-dns.yaml
   - grafana-stack.yaml
   - ingress-nginx.yaml
-  - nats-operator.yaml
+  # - nats-operator.yaml
   - opentelemetry-operator.yaml
   # - prometheus-stack.yaml
   - sealed-secrets.yaml
