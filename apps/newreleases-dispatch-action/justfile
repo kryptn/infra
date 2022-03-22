@@ -2,6 +2,9 @@
 update version:
     kustomize edit set image ghcr.io/kryptn/newreleases-dispatch-action:latest=ghcr.io/kryptn/newreleases-dispatch-action:{{version}}
 
-seal-secret:
-    kubectl -n newreleases-dispatch-action create secret generic newreleases-dispatch-action-secret --dry-run=client --from-env-file=newreleases-dispatch-action.env -o json > newreleases-dispatch-action.env.json
-    cat newreleases-dispatch-action.env.json | kubeseal --controller-namespace sealed-secrets > newreleases-dispatch-action-secret.json
+seal-secret namespace secret_name file:
+    kubectl -n {{namespace}} create secret generic {{secret_name}} --dry-run=client --from-env-file={{file}} -o json > {{file}}.json
+    kubeseal --controller-namespace sealed-secrets --controller-name sealed-secrets < {{file}}.json > sealed-{{secret_name}}.json
+
+seal-secrets:
+    just seal-secret newreleases-dispatch-action newreleases-dispatch-action-secret newreleases-dispatch-action.env

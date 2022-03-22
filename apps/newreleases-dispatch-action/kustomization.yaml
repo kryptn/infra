@@ -5,7 +5,7 @@ resources:
 - deployment.yaml
 - ingress.yaml
 - svc.yaml
-- newreleases-dispatch-action-secret.json
+- sealed-newreleases-dispatch-action-secret.json
 namespace: newreleases-dispatch-action
 commonLabels:
   app: newreleases-dispatch-action

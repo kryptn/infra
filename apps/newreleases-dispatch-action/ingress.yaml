@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: newreleases-dispatch-action-ingress
@@ -10,10 +10,12 @@ spec:
   - host: newreleases.arq.dev
     http:
       paths:
-      - path: /
+      - pathType: ImplementationSpecific
         backend:
-          serviceName: newreleases-dispatch-action-service
-          servicePort: 80
+          service:
+            name: newreleases-dispatch-action-service
+            port:
+              number: 80
   tls:
   - hosts:
     - newreleases.arq.dev
