@@ -1,8 +1,0 @@
-version: "3"
-
-includes:
-  cluster:
-    taskfile: ./cloud/Taskfile.yml
-    dir: ./cloud
-  argocd: ./tasks/argo_cd.yml
-  # secret: ./tasks/sealed_secrets.yml
