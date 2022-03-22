@@ -6,7 +6,7 @@ namespace: tailscale
 resources:
   - namespace.yaml
   - generated-helm-tailscale.yaml
-  - sealed-tailscale-secret.json
+  - sealed-tailscale-relay-config.json
 
 patches:
   - path: env-patch.yaml

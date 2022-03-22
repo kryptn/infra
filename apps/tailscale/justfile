@@ -1,4 +1,9 @@
 update version:
-    helm repo add mvisonneau https://charts.visonneau.fr
-    helm repo update
-    helm template tailscale-subnet-router mvisonneau/tailscale-relay --version={{version}} > generated-helm-tailscale.yaml
+    helm template tailscale-subnet-router --repo="https://charts.visonneau.fr" tailscale-relay --version={{version}} > generated-helm-tailscale.yaml
+
+seal-secret namespace secret_name file:
+    kubectl -n {{namespace}} create secret generic {{secret_name}} --dry-run=client --from-env-file={{file}} -o json > {{file}}.json
+    kubeseal --controller-namespace sealed-secrets --controller-name sealed-secrets < {{file}}.json > sealed-{{secret_name}}.json
+
+seal-secrets:
+    just seal-secret tailscale tailscale-relay-config tailscale_key.env
