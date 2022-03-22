@@ -4,4 +4,5 @@ kind: Kustomization
 bases:
   - ../apps/sealed-secrets/
   - ../apps/argo-cd/
+  - ../projects/
 

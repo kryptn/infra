@@ -1,0 +1,11 @@
+
+step1:
+    kustomize build ../apps/sealed-secrets | kubectl apply -f -
+    kustomize build ../apps/ingress-nginx | kubectl apply -f -
+
+step2:
+    just ../apps/argo-cd/ seal-secrets
+
+step3:
+    kustomize build ../apps/external-dns/ | kubectl apply -f -
+    kustomize build ../apps/argo-cd/ | kubectl apply -f -
