@@ -26,4 +26,4 @@ spec:
   tls:
   - hosts:
     - argocd.arq.dev
-    secretName: argocd-secret # do not change, this is provided by Argo CD
+    secretName: argocd-secret-tls
