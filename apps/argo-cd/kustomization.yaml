@@ -19,4 +19,8 @@ patches:
   - path: overlays/argocd-rbac.yaml
     target:
       kind: ConfigMap
+  - path: add-managed-label.yaml
+    target:
+      kind: SealedSecret
+      name: argocd-github-oidc-token
 
