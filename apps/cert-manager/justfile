@@ -6,4 +6,4 @@ seal-secret namespace secret_name file:
     kubeseal --controller-namespace sealed-secrets --controller-name sealed-secrets < {{file}}.json > sealed-{{secret_name}}.json
 
 seal-secrets:
-    just seal-secret external-dns cert-manager-digitalocean-token do_token.env
+    just seal-secret cert-manager cert-manager-digitalocean-token do_token.env

@@ -3,20 +3,20 @@
   "apiVersion": "bitnami.com/v1alpha1",
   "metadata": {
     "name": "cert-manager-digitalocean-token",
-    "namespace": "external-dns",
+    "namespace": "cert-manager",
     "creationTimestamp": null
   },
   "spec": {
     "template": {
       "metadata": {
         "name": "cert-manager-digitalocean-token",
-        "namespace": "external-dns",
+        "namespace": "cert-manager",
         "creationTimestamp": null
       },
       "data": null
     },
     "encryptedData": {
-      "do_token": "AgCZ5WREGy0/FBP4ghgkcTzxJa01f1blgdSnEimZk5bier86fo3KFG9X0PXpgAIQaOzMbuBMcSuSwp3wXNKxxG98DI53bCTQ4SCTe+dNj1pVgziFIZ66qHx0dN+RtM717zpI7fovHs/kgT7Bq9UyQHaO//yxJk62a6he4CPC4cvqT0e2TfYIMD40u3Ep186rHcruTvGxVw4z+CgoqPdOslbZEnpi/a2hLzevq/xVEfF/w05bXySGfxHQ8igVbakcavPvr5XLAIxOR6hcvWSxA/xAf6djRxpKrG/T8WaN+5Egjpci8FhV6Zj1m9NrqLe+6bhBcgLhNxwPKGjfEMHDsl/Ts6Rv6hfIj8lIU7X57VYxVWk5bD71mbShNamQ4ejD7hDaKEFSr2rlEhkU4GSJSf6p/YBh3PaU5SmLtCkoXyF1xxlMZoYVyuCoE+xjJ4n7SB1IfvEmLXZ4ALQ0Qv4fEF4pVEzXJOPZiqTqrkzQRog/kol0cswT3VewoVIzZtsMdHj9tzjh9UoJgfP+9CKPBlhPdsAImcxOH+0O01KuGw3zA6E0WVLAbu6rC6EEqvGOFtRGwR9NCi63b/TPYpUfblJWTAUyvZpWVPX8SSw7hqs6O8mHv7UkIo9KRbRpr9RT+NOOisgcO54yThNCckYXo204JcNN1utiCChFYQ5YfgUcL7Rz7JltVI63t87V/40LRNdYgcKlUKNgTbSi019s1wqZILgIySSXNoZ8u4XLOQcatjyCESUbzJWxmUUZt9/wNHwNnNg2wPI3nmdBMr8W810q"
+      "do_token": "AgCyfLs9WkmTZnq1+HXoUSrpm3m4RLeNOg35je/i2eWj4AGmYzmmD3rRukgdHP6C9hFOP/dhgvQCkcqiUVcbdsFQBsvaSyfP/8n5Dfc2MSBapNWxPzxQJhIZoQnXU3L6Qwro+9TpD5u64c/EwalwJ9KyeItPNYp5SNwQuvMrIRn3Odg95YFbIR6VfXzQGQ6i6N8UmSXMZae/mkGXVlJXUA0ORj1ZWCVTfBWbD2ezJcyeO/jgXdeEv/mfzJKg2JsSmdXa64So1Dc51Az2y8XgYy3vpKSRnvX3CSsfbybWQbru5H7MjbkEkzxoUzDJupmKAx0Mgede6RoGS//RKGNpi8Y9WUBvrrbbH9yW9qQ8UpuMAa4kPvJDZUVs1D+CyKfLwhy5VZQTWQF8iKaWmqsYexwe15xW9rW84Gyl17SwQWmxSq2RSih3bYDpVOnm0slvWaW26myXiolvHlv6U7PAs52gMXheGt+8NayX5MsfAY7u8tPbkxP7QR2AzkhUHW8sjQBiZyyfJKIMEv/TxH0BJOcnCv1JChkH8LVpNOyf2Iu0605qLNMrFkRk4X1QbyljTMFF7LiNBaI7r1L6otvibUbiPnFW69OC0ZW4mIymIbtpRa9wNOYH0G+074hPWZUhtDsqwsQKI7H1HUL+m0G9JqQJBXx/UAyox+Eeh0SUHdTFr2SP3HswvZbF1KK2xy12Ys9HUeddpPm+be2l74HZmKaVgKP1v+NYHsA+AkmXpHny+cLBnqD7V2PviKQGt8fksn7/zz7XMCpVaRWGuMHMkwyd"
     }
   }
 }
