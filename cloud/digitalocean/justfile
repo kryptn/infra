@@ -1,5 +1,8 @@
 
 
+init:
+    terraform init
+
 create:
     terraform apply -auto-approve
     terraform output -raw kubeconfig > ~/.kube/arq.yaml

@@ -2,7 +2,7 @@ resource "digitalocean_kubernetes_cluster" "arq" {
   name   = var.cluster_name
   region = var.do_region
   # Grab the latest version slug from `doctl kubernetes options versions`
-  version = "1.20.15-do.0"
+  version = "1.22.7-do.0"
   # tags    = ["staging"]
 
   # auto_upgrade  = true
@@ -10,11 +10,10 @@ resource "digitalocean_kubernetes_cluster" "arq" {
   node_pool {
     name       = "worker-pool"
     size       = "s-2vcpu-2gb"
-    node_count = 4
+    node_count = 5
   }
 
 }
-
 
 
 output "kubeconfig" {
