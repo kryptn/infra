@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: websub-listener-ingress
@@ -10,10 +10,12 @@ spec:
   - host: websub.arq.dev
     http:
       paths:
-      - path: /
+      - pathType: ImplementationSpecific
         backend:
-          serviceName: websub-listener-service
-          servicePort: 80
+          service:
+            name: websub-listener-service
+            port:
+              number: 80
   tls:
   - hosts:
     - websub.arq.dev

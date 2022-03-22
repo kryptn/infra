@@ -1,0 +1,8 @@
+
+
+seal-secret namespace secret_name filename file:
+    kubectl -n {{namespace}} create secret generic {{secret_name}} --dry-run=client --from-file={{filename}}={{file}} -o json > {{file}}.json
+    kubeseal --controller-namespace sealed-secrets --controller-name sealed-secrets < {{file}}.json > sealed-{{secret_name}}.json
+
+seal-secrets:
+    just seal-secret websub-listener websub-listener config.toml websub_listener_config.toml
