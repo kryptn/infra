@@ -5,4 +5,4 @@ seal-secret namespace secret_name filename file:
     kubeseal --controller-namespace sealed-secrets --controller-name sealed-secrets < {{file}}.json > sealed-{{secret_name}}.json
 
 seal-secrets:
-    just seal-secret websub-listener websub-listener config.toml websub_listener_config.toml
+    just seal-secret websub-listener websub-listener-config-secret config.toml websub_listener_config.toml
