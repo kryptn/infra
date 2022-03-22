@@ -6,7 +6,7 @@ namespace: websub-listener
 resources:
 - namespace.yaml
 - ingress.yaml
-- sealed-websub-config.json
+- sealed-websub-listener.json
 - github.com/kryptn/websub-listener/deploy/kustomize?ref=v0.1.2
 
 
