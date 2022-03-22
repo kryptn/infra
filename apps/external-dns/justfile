@@ -1,2 +1,9 @@
 update version:
     kustomize build github.com/kubernetes-sigs/external-dns/kustomize?ref={{version}} > generated-external-dns.yaml
+
+seal-secret namespace secret_name file:
+    kubectl -n {{namespace}} create secret generic {{secret_name}} --dry-run=client --from-env-file={{file}} -o json > {{file}}.json
+    kubeseal --controller-namespace sealed-secrets --controller-name sealed-secrets < {{file}}.json > sealed-{{secret_name}}.json
+
+seal-secrets:
+    just seal-secret external-dns external-dns-digitalocean-token do_token.env

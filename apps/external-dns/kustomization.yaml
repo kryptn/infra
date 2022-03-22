@@ -7,7 +7,7 @@ namespace: external-dns
 resources:
 - namespace.yaml
 - generated-external-dns.yaml
-- sealed-do-token.json
+- sealed-external-dns-digitalocean-token.json
 
 patches:
 - path: digitalocean.yaml
