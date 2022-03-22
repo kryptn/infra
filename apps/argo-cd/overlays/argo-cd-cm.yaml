@@ -13,10 +13,10 @@ data:
   repository.credentials: |
     - url: https://github.com/kryptn/
       passwordSecret:
-        name: argo-cd-github-token
+        name: argocd-github-token
         key: github_token
       usernameSecret:
-        name: argo-cd-github-token
+        name: argocd-github-token
         key: github_username
   resource.customizations: |
     admissionregistration.k8s.io/MutatingWebhookConfiguration:
@@ -112,5 +112,5 @@ data:
         name: GitHub
         config:
           clientID: 3f6eb298c1a35668a738
-          clientSecret: $argo-cd-github-oidc-token:oidc_client_secret
+          clientSecret: $argocd-github-oidc-token:oidc_client_secret
           loadAllGroups: true
