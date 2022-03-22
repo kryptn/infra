@@ -8,7 +8,6 @@ resources:
 - ingress.yaml
 - sealed-websub-config.json
 - github.com/kryptn/websub-listener/deploy/kustomize?ref=v0.1.2
-- ../podlogs
 
 
 commonLabels:

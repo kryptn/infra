@@ -8,7 +8,6 @@ resources:
 - namespace.yaml
 - generated-external-dns.yaml
 - sealed-do-token.json
-- ../podlogs
 
 patches:
 - path: digitalocean.yaml

@@ -7,7 +7,6 @@ resources:
   - namespace.yaml
   - generated-helm-tailscale.yaml
   - sealed-tailscale-secret.json
-  - ../podlogs
 
 patches:
   - path: env-patch.yaml

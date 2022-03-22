@@ -11,4 +11,3 @@ resources:
 - ./agent-operator
 - ./agent.yaml
 - ./logsinstance.yaml
-- ../podlogs
