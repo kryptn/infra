@@ -1,4 +1,4 @@
 - op: add
-  path: /spec/template/metadata/annotations
+  path: /spec/template/metadata/labels
   value:
     app.kubernetes.io/part-of: argocd
