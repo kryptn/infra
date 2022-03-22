@@ -12,3 +12,6 @@ step3:
 
 step4:
     kustomize build ../apps/argo-cd/ | kubectl apply -f -
+
+step5:
+    kustomize build ../projects/ | kubectl apply -f -
