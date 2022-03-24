@@ -1,0 +1,4 @@
+
+
+update version:
+    helm template vault --repo https://helm.releases.hashicorp.com --version {{version}} --values values.yaml vault > vault.yaml

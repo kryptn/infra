@@ -1,0 +1,26 @@
+{
+  "kind": "SealedSecret",
+  "apiVersion": "bitnami.com/v1alpha1",
+  "metadata": {
+    "name": "vault-storage",
+    "namespace": "vault",
+    "creationTimestamp": null
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "vault-storage",
+        "namespace": "vault",
+        "creationTimestamp": null
+      },
+      "data": null
+    },
+    "encryptedData": {
+      "AWS_ACCESS_KEY_ID": "AgATK8DiSm914COt08e3qnuumplpOxXQc23Zuo2ogoJYzWeGB+2uFcTbBVJ2lkH+gDTE1KVJ7VcbsMgl2wPJkUloMCqkViJAlE74j7bKjcuOnvOrDixJ3SuYY/Rc+zHHhryFsrYoI21lU48c01VI49Ai71q2/hytPgBFAT1LVkWSx6eBaJF7QanvXwoD2tfgJ0vrFKw29/ifKqaxcR3gzChVEklxbtghb25wkfkttJR8zSnLzZpb+aKv941tkz0BZXRRxiLtvdRWjiwEBKY7Pr2WJ0K3+Urac7QthGoIDl64ckdRExvg4tR/gmRxQzVCQI/E0rHN/teTirS54h5LgmH70TU1lQN7mxiNNWVLL9hqugov8eD6r0i6pZlzuAw62YSIZE2RS6KNfgjwWauL+A8ZLXT4gfUCyF80y7cjkSl1RE2C5dSWRxt88EHdyrAReeFyHvD+Xrnm2axRXzf8F3wIy6G/IEOS5Cai1MgSU3nVYUD2GfKpvGrPbxmsxWGck/E2qD7Bcq/nV1rOLsGQxcIMjTKYHF7EQWz7cW5Fgi/RJgMfn9p45EhLOXhnK1AhzTJpNKwkgA2xBQ1K2GLLF2eHcS53TX5qiFnccJG+5aToNZQl1jfgP0fCJZ4Q6yY8nn8YmJmW6Kxqk7etzbb3LB+jl62W2rtIIrQXB1Ay6WxT4oR49rVvHCBqfPL5awvz2iZYayhJUPk=",
+      "AWS_REGION": "AgBmTsHjRb9MwOphtmX60k/9zK6cRMEypPyFZaVsjqQFXj91/yi0ua+0ZKyAblg1tLAI6cz3XumUDLioxYCBob9Hnq/weWZxJLWNO9/nm3AP7ND16PC5pguNfQS0BqFyxqYc/dnSFu8F8aGFjk0GaZhUlazKPdN/s3w3bAzZhP+fp/X66H9zy/o3ufIOPMsFeu0I6QElHy9BtzPhjyp4VUgrgMqQFh1bAy/wFb0Fo7WccA08GnUBoaWEbGp6uTa7FkZvefE0upek0yqOb4fgdmPd9vy7z51608Fzq9OC4JU5xTRWV6kwijSyVOSvp6aCaPxEnLHSeaWNPdT/GJ+EGNKmd43GH72KlgHvbtRhuz82tD4+UCy60JHvggGhIHKXLzHdUKe8E8ua2VtoXVzzENSB3ii8Qb2DhNY+h1FQvBeIZAWkfWxncy8Uda155IA9mLuebLTIx9P/lBgqpT6NAczO/zQ0h6CnoVMpE4gXQ5I+D4rjdSTAOLjvOR3yUDl/ugYvRww/UVlLgxwqrCCrBzm8+K0sE2r6pBTov63HiJcjZ5gJMzTUAQOqu+kOt6QrYkQULzx8/FKatbfUgGr60Zt003QDBbLJCfRdJsfmU17dX/6cqTysTyzEx8Ah5QSdhCM5MtV+z2EiiLJvPvDodYJ7CIFeXynqXI2wc80cxcxFN+2mvQ69fUaLM/v8yNWJUklL3O0lDl4=",
+      "AWS_S3_BUCKET": "AgAhHmkkATIw5b5nl6G7paiL8Ua/rfHmVZlJKepLFxVxoo3ObyUbgNMtl7Bnq05fVsGilgTJWSV/twuuZZjNnfJaxpAREt3Vla+SUnhe0cgQtAWg/o5sZdooysPlFl+cWuEmbaLCF8hdAnifdKvnB6CCy0f9gBUlYcRtNeY4qOpmTKQjOUyNl6mdQgCBW0MqeZM8qq3ScscqQQjw10ce2hD0xCkRm/hnjLa8pFi0Q/HbjElo3S26I1m70mkMBxVyl+5U7rzwCEueZSx+ZjymtI4bwAo8Xb1KH7MEI/8bw3Evukai5hA4Jwe8eEaKEtKCg34glxPb3IzR77FNkFoiUEUABqLZif6EXCSbACjhX3YhQ3UtapOjBlj0YaRpVmSst14QKJcz2d/CLlzBBiDhg/QwxPXep5WkJG80a6XEmdPsIL/jSPub82uuDBamfHcztarKxUDA8q0e4n8aIJHbtCuKz0ESZ1d6Abcrhb0dYmtUN8rAKzDTsIxGgzqG+GknHftrovgxL4ToG7jo8yxtjKjctXsUg1LQKA7I7ucDdzo5spiu2ZmiLzcVHfSD7MiiECZIh/GI6SYOt+x2BvQQRjhykLdO9RU5YVrit4fPxIWrfFqfa59ZSSYU+POrkIIhmrlEY6r9/tXXnLPLIz8pA77+TRG0wKKZ7GQxrSXPTJwIVCf6i241P4tQDQF3tGZxC/ozsIztsdapFSW1pDF11Fj0",
+      "AWS_S3_ENDPOINT": "AgBX8wjeHkvKBQUXQjp9QWDjpy4SeytTX+aqu1HeVFMTx3j+7wPc4wN6A96595+xkP+5ynGquJuFfUptsxGr9rdXaAiE3bmbO+S6pJZFMUxcCEIwftcdsQNPd22QTqghRHsAZ9U9sSMLacxiM4cv7rnLHBqOC1TZEFunjyX+pDmlou3X8fqXXf79p4y3SCBlH8VbM1Y9QmZ/aWJpnvKpwSRf56GKJnMS7Hspzf12V0cgEHfuashvNt5LcuwHfzWrZPvbuI3ILNH0cihsYvrQZgNC+yD/rfVYj41Z/Z7dj3Hy3SV4qops+2vNgEmZVSrYAJlmHbzOw2Qb5MjScMhbXMXeLgG5IMs5+OYd7jxEQaWnaFPlrjYP7Efaqs8zjRElB0agJuNMWA/MI8cHoQlbUBQaR8WqLaHBBo5WHIH/mSLeeV9+CU48Ne5/fIPGl/sSp0e/e8r7T9nkFNHsIhBNU/PN3lPdK9f1C1VsPV0YEIRkddApg4LFzOdDJRYpj5n6KaeRmCbHT+2mf7Hgb4lszTB9MuDf04m5a4zg/yGDhPfat3cCn4wB2Pj0KYWelY6b308dSzbPqU0D1ChD8N7ZVjKZpEd585j4jlnU/T6kXqRJ5JeakVdaEqjOr3RgSNvsezrv03VAGRhthal9d2ORZeVyeUktH15O99irSTNstr4A0r05p/LNMhIC0BWPorkZtFvQKSPP82K+9kXm0HxFXXY=",
+      "AWS_SECRET_ACCESS_KEY": "AgCcH+qxfGunQsMZeYxgqDwlEswQ8sCtVUpw7GAkeVK7a0kYwlrO1ptmMHQkdILqFDvOyQ3490f8+yQS6OD2I+oDLJEv2WR9mVIWiHUMDJAcGo3dso0qMdoAFk2vysZG3hPD0/ag3wNrvS7Wimf+2bHkZBfQP1tYQtcwbrqu/lr124elRFezBzRjKj6JP23yEdyVf+ZjZJH7u8B8PE+/zZzp6nz6eqmlSSDCoaxKbT+SSkfhsPdJRYaPk7XrOJf2IvJt2jXY1F22Oo6VT9fsJyjBpBuvcrzGC2s0ocZz+hDZZndPG7u6eG1U/s8vHcgxRxJOVyE7euI0DhoTC+hlv9fBDHzE2N8FMcAde6q3QChAl1cxVqh2xiA1OfsBhzbewmuwPUeBBTYBzey2mBmUg7QT/VTAYWjV3NMwhV9cjf7ePXXOeK7Vj8Y2yhgQOQdgydhfuTjzuVGOIHOci+MGbJ+NtR4ThkH+y18Oio++fPZVsZZj4d1FtxCYXN9GuZZiPLRPykGKK5r3BheZUToTL6hGCRsO3l/QfTEwfjxG+vAgU294ugqqZGnC2UFMcYyid+dJOe2sZJwlkFb3OxX1goDdPzPf6Fhg/BBU1C6I4mjZf4ahnpbZlYW0KHYaET/Ld9P3Br29pUer1YnvLBAKug89Kttg1as2Tg2gbs730O2zM6fGPuMjJWXGzwXWIwSxVM38ZsiOcETd217j"
+    }
+  }
+}
