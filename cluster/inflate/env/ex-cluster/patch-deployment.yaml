@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inflate
+spec:
+  template:
+    spec:
+      containers:
+        - name: inflate
+          topologySpreadConstraints:
+            - maxSkew: 3
+              topologyKey: topology.kubernetes.io/zone
+              whenUnsatisfiable: DoNotSchedule
+              labelSelector:
+                matchLabels:
+                  app: inflate
+            - maxSkew: 3
+              topologyKey: kubernetes.io/hostname
+              whenUnsatisfiable: ScheduleAnyway
+              labelSelector:
+                matchLabels:
+                  app: inflate
